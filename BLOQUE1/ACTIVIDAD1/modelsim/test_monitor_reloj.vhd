@@ -108,18 +108,18 @@ begin
     elsif clk'event and clk = '1' and ena_assert then
       if tic_1s = '1' and info = 0 and info_T1 = 0 and (horas&minutos&segundos) /= 0 and programado = '0' then
         assert (hora_to_natural(hora_T1) + 1) = hora_to_natural(horas&minutos&segundos)
-        report "Error de tipo 1 detectado por el monitor 2"  -- TEXTO PARA SER MOFIFICADO CON UN MENSAJE MAS EXPLICATIVO
+        report "Error monitor 2: No se ha incrementado correctamente la hora"  -- TEXTO PARA SER MOFIFICADO CON UN MENSAJE MAS EXPLICATIVO
         severity error;
 
       elsif tic_1s = '1' and info = 0 and info_T1 = 0 and programado = '0' then
         assert (hora_T1 = X"115959" and modo = '0') or (hora_T1 = X"235959" and modo = '1')
-        report "Error de tipo 1 detectado por el monitor 2"  -- TEXTO PARA SER MOFIFICADO CON UN MENSAJE MAS EXPLICATIVO
+        report "Error monitor 2: las horas no se han resetado a 00"  -- TEXTO PARA SER MOFIFICADO CON UN MENSAJE MAS EXPLICATIVO
         severity error;
 
 
       elsif info_T1 /= 0 then
         assert segundos = 0
-        report "Error de tipo 2 detectado por el monitor 2"  -- TEXTO PARA SER MOFIFICADO CON UN MENSAJE MAS EXPLICATIVO
+        report "Error monitor 2: Los segundos no se resetean a 0 al entrar en el modo programación"  -- TEXTO PARA SER MOFIFICADO CON UN MENSAJE MAS EXPLICATIVO
         severity error;
 
       end if;
@@ -162,30 +162,30 @@ begin
     elsif clk'event and clk = '1'  and tic_1s = '1' and ena_assert then
       if info = 0 and modo = '0' then
         if (horas&minutos&segundos) = 0  then
-
+	  assert AM_PM_T1 /= AM_PM
 		  -- SENTENCIA ASSERT PARA SER COMPLETADA
-          report "Error en cambio de AM-PM: no cambia"
+          report "Error en cambio de AM-PM: no cambia. HOLA ALBERTO QUE TAL"
           severity error;
 
         else
-
+	  assert AM_PM_T1 = AM_PM
 		  -- SENTENCIA ASSERT PARA SER COMPLETADA
-          report "Error en AM-PM: cambia cuando no debe"
+          report "Error en AM-PM: cambia cuando no debe. DANI DICE QUE ESTO EST ARREGLADO"
           severity error;   
 
        end if;
 
       elsif info = 0 and modo = '1' then
-        if (horas&minutos& segundos) < X"120000" then
-
+        if (horas&minutos&segundos) < X"120000" then
+	  assert AM_PM = '0'
 		  -- SENTENCIA ASSERT PARA SER COMPLETADA
           report "Error en el valor de AM-PM en modo 24 horas"
           severity error;
 
         else
-
+	  assert AM_PM = '1'
 		  -- SENTENCIA ASSERT PARA SER COMPLETADA
-          report "Error en el valor de AM-PM en modo 24 horas"
+          report "Error en el valor de AM-PM en modo 24 horas. Marquina feo."
           severity error;   
 
         end if;

@@ -66,16 +66,16 @@ begin
   end process;
   
   fdc_AM_PM <= ena or inc_campo when horas = X"11" and modo = '0' else
-               '0';
+	       '0';
 
   -- Paso de formato 24 a 12
-  aux_horas_12_L <= horas(3 downto 0) - 2 when horas(3 downto 0) > 1 else
+  aux_horas_12_L <= horas(3 downto 0) - 2 when horas (3 downto 0) > 1  else 
                     horas(3 downto 0) + 8;
 
   aux_horas_12_H <= horas(7 downto 4) - 1 when horas(3 downto 0) > 1 else
                     horas(7 downto 4) - 2;
 
-  horas_12 <= aux_horas_12_H & aux_horas_12_L when horas > 11 else
+  horas_12 <= aux_horas_12_H & aux_horas_12_L when horas > X"11" else --Error: el número 11 no estaba en el formato indicado
              horas;
 
   -- Paso de formato 12 a 24
@@ -122,8 +122,8 @@ begin
   end process;
   
   ena_decenas_horas <= ena or inc_campo when horas(3 downto 0) = 9        else
-                       ena or inc_campo when horas > X"23"                else
-                       ena or inc_campo when horas > X"11" and modo = '0' else
+                       ena or inc_campo when horas = X"23" 		  else --ERROR: hemos cambiado el > por =
+                       ena or inc_campo when horas = X"11" and modo = '0' else
                        '0';
 
   process(clk, nRst)    -- Decenas de horas
@@ -145,7 +145,7 @@ begin
           horas(7 downto 4) <= dato_in(7 downto 4);	
 
       elsif ena_decenas_horas = '1' then
-        if (modo = '0' and horas(7 downto 4) = X"1") or (horas(7 downto 4) = X"2") then
+        if (modo = '0' and horas(7 downto 4) = X"1") or (horas(7 downto 4) = X"2") then 
           horas(7 downto 4) <= "0000";
 
         else

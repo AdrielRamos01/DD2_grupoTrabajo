@@ -92,7 +92,7 @@ package body pack_test_reloj is
                              constant periodo:     in  std_logic;
                              constant valor:       in  std_logic_vector(15 downto 0)) is
   begin
-  
+  	wait until horas&minutos = valor and AM_PM = periodo;
 	-- CODIGO A COMPLETAR POR EL ESTUDIANTE
 	
   end procedure;
@@ -146,6 +146,7 @@ package body pack_test_reloj is
                              signal   clk:       in  std_logic) is
   begin
   
+	tecleo(ena_cmd, cmd_tecla, clk, X"A");
 	-- CODIGO A COMPLETAR POR EL ESTUDIANTE
 
   end procedure;

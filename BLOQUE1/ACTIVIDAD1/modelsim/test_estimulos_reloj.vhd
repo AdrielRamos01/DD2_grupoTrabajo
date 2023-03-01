@@ -66,16 +66,41 @@ begin
     -- Cuenta en formato de 12 horas
     wait until clk'event and clk = '1';
 
+    -- Contamos en formato 24 horas
+    cambiar_modo_12_24(ena_cmd, cmd_tecla, clk);
 
-    -- Esperar a las 11 y 58 AM
-    esperar_hora(horas, minutos, AM_PM, clk, '0', X"11"&X"58");
+    -- Recorrer todas las horas en modo 12 
+   
+    	--esperar_hora(horas, minutos, AM_PM, clk, '1', X"11"&X"59");
 	
-	-- Cambio de 12h a 24 horas
+	--esperar_hora(horas, minutos, AM_PM, clk, '0', X"01"&X"59");
+
+    -- Recorrer todas las horas en modo 24h
+	--cambiar_modo_12_24(ena_cmd, cmd_tecla, clk);
+	--esperar_hora(horas, minutos, AM_PM, clk, '1', X"23"&X"59");
 	
-	cambiar_modo_12_24(ena_cmd, cmd_tecla, clk);
+	--esperar_hora(horas, minutos, AM_PM, clk, '0', X"01"&X"50");
+
+	for i in 0 to 24 loop
+          if horas = X"23" then
+            esperar_hora(horas, minutos, AM_PM, clk, '0', X"00"&X"30");
+          else
+            if horas > X"11" then
+              esperar_hora(horas, minutos, AM_PM, clk, '1',(horas+1)&X"00");
+	      cambiar_modo_12_24(ena_cmd, cmd_tecla, clk);
+              wait until clk'event and clk = '1';
+	      cambiar_modo_12_24(ena_cmd, cmd_tecla, clk);
+            else
+              esperar_hora(horas, minutos, AM_PM, clk, '0',(horas+1)&X"00");
+              cambiar_modo_12_24(ena_cmd, cmd_tecla, clk);
+              wait until clk'event and clk = '1';
+	      cambiar_modo_12_24(ena_cmd, cmd_tecla, clk);
+            end if;
+          end if;
+	end loop;
 	
-	-- Para completar por el estudiante
-    -- ...
+        
+ 
 
     assert false
     report "done"
