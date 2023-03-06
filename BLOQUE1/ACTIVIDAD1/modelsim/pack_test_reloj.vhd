@@ -238,7 +238,21 @@ procedure programar_hora_directa (signal ena_cmd: out std_logic;
 
   begin
   
-  
+
+  tecleo(ena_cmd, cmd_tecla, clk, valor(15 downto 12));
+  wait until clk'event and clk = '1';
+
+  tecleo(ena_cmd, cmd_tecla, clk, valor(11 downto 8));
+  wait until clk'event and clk = '1';
+
+  tecleo(ena_cmd, cmd_tecla, clk, X"B");
+  wait until clk'event and clk = '1';
+
+  tecleo(ena_cmd, cmd_tecla, clk, valor(7 downto 4));
+  wait until clk'event and clk = '1';
+
+  tecleo(ena_cmd, cmd_tecla, clk, valor(3 downto 0));
+  wait until clk'event and clk = '1';
 
 
 

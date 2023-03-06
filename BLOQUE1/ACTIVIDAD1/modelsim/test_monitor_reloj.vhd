@@ -39,51 +39,51 @@ begin
 
     elsif clk'event and clk = '1' and tic_1s = '1' and ena_assert then
       assert segundos(3 downto 0) < 10
-      report "Error: valor inválido en unidades de segundo"
+      report "Error: valor invï¿½lido en unidades de segundo"
       severity error;
 
       assert segundos(7 downto 4) < 6
-      report "Error: valor inválido en decenas de segundo"
+      report "Error: valor invï¿½lido en decenas de segundo"
       severity error;
 
       assert minutos(3 downto 0) < 10
-      report "Error: valor inválido en unidades de minuto"
+      report "Error: valor invï¿½lido en unidades de minuto"
       severity error;
 
       assert minutos(7 downto 4) < 6
-      report "Error: valor inválido en decenas de minuto"
+      report "Error: valor invï¿½lido en decenas de minuto"
       severity error;
 
       if modo = '0' and horas(7 downto 4) = 1 then
         assert horas(3 downto 0) < 2
-        report "Error: valor inválido en unidades de hora"
+        report "Error: valor invï¿½lido en unidades de hora"
         severity error;
 
       elsif modo = '0' then
         assert horas(3 downto 0) < 10
-        report "Error: valor inválido en unidades de horas"
+        report "Error: valor invï¿½lido en unidades de horas"
         severity error;
 
       elsif modo = '1' and horas(7 downto 4) = 2 then
         assert horas(3 downto 0) < 4
-        report "Error: valor inválido en unidades de hora"
+        report "Error: valor invï¿½lido en unidades de hora"
         severity error;
 
       elsif modo = '1' then
         assert horas(3 downto 0) < 10
-        report "Error: valor inválido en unidades de horas"
+        report "Error: valor invï¿½lido en unidades de horas"
         severity error;
       
       end if;
 
       if modo = '0' then
         assert horas(7 downto 4) < 2
-        report "Error: valor inválido en decenas de horas"
+        report "Error: valor invï¿½lido en decenas de horas"
         severity error;
 
       elsif modo = '1' then
         assert horas(7 downto 4) < 3
-        report "Error: valor inválido en decenas de horas"
+        report "Error: valor invï¿½lido en decenas de horas"
         severity error;
 
       end if;
@@ -119,7 +119,7 @@ begin
 
       elsif info_T1 /= 0 then
         assert segundos = 0
-        report "Error monitor 2: Los segundos no se resetean a 0 al entrar en el modo programación"  -- TEXTO PARA SER MOFIFICADO CON UN MENSAJE MAS EXPLICATIVO
+        report "Error monitor 2: Los segundos no se resetean a 0 al entrar en el modo programaciï¿½n"  -- TEXTO PARA SER MOFIFICADO CON UN MENSAJE MAS EXPLICATIVO
         severity error;
 
       end if;
@@ -148,7 +148,7 @@ begin
     variable ena_cmd_T1: std_logic;
     variable tecla_T1:   std_logic_vector(3 downto 0);
     variable AM_PM_T1:   std_logic := '1';
-    variable horas_T1:    std_logic_vector(7 downto 0);
+    variable horas_T1:   std_logic_vector(7 downto 0);
     variable modo_T1:    std_logic;
     variable ena_assert: boolean := false;
 
@@ -282,8 +282,8 @@ begin
 
     elsif clk'event and clk = '1' and ena_assert then
       if pulso_largo_T1 = '1' and cmd_tecla_T1 = X"A" and info_T1 = 0 then
-        assert  info = 2
-        report "Error detectado por el monitor 5"  -- TEXTO PARA SER MOFIFICADO CON UN MENSAJE MAS EXPLICATIVO
+        assert  info = 2 
+        report "Error: entrar en el campo de programacion por defecto (horas), hemos entrado en minutos"  -- TEXTO PARA SER MOFIFICADO CON UN MENSAJE MAS EXPLICATIVO
         severity error;
       end if;
 
@@ -296,7 +296,7 @@ begin
 
  
   -- MONITOR 6
-  -- Verificación del comando de fin de programación de reloj
+  -- Verificaciï¿½n del comando de fin de programaciï¿½n de reloj
   process(clk, nRst)
     variable cmd_tecla_T1: std_logic_vector(3 downto 0);
     variable ena_assert:   boolean := false;
@@ -319,7 +319,7 @@ begin
 
   
   -- MONITOR 7
-  -- Verificación de time-out
+  -- Verificaciï¿½n de time-out
   process(clk, nRst)
     variable info_T1:    std_logic_vector(1 downto 0);
     variable cnt: natural := 0;
@@ -343,7 +343,7 @@ begin
       elsif cnt = 7 then
         cnt := 0;
         assert info = 0
-        report "Error: ignorado time-out de fin de programación"
+        report "Error: ignorado time-out de fin de programaciï¿½n"
         severity error;
 
 	  -- Ha transcurrido un segundo y no se ha pulsado ninguna tecla
@@ -373,12 +373,12 @@ begin
       if ena_cmd_T1 = '1' and cmd_tecla_T1 = X"B" and info_T1 /= 0 then
         if info_T1 = 1 then
           assert info = 2
-          report "Error de tipo 1 detectado por el monitor 8"  -- TEXTO PARA SER MOFIFICADO CON UN MENSAJE MAS EXPLICATIVO
+          report "Error al cambiar de porgramacion horas a programacion minutos"  -- TEXTO PARA SER MOFIFICADO CON UN MENSAJE MAS EXPLICATIVO
           severity error;
 
         else
           assert info = 1
-          report "Error de tipo 2 detectado por el monitor 8"  -- TEXTO PARA SER MOFIFICADO CON UN MENSAJE MAS EXPLICATIVO
+          report "Error al cambiar de porgramacion minutos a programacion horas"  -- TEXTO PARA SER MOFIFICADO CON UN MENSAJE MAS EXPLICATIVO
           severity error;
 
         end if;
@@ -393,7 +393,7 @@ begin
 
   
   -- MONITOR 9
-  -- Verificación de incremento de campo
+  -- Verificaciï¿½n de incremento de campo
   process(clk, nRst)
     variable hora_T1: std_logic_vector(15 downto 0);
     variable ena_assert:     boolean := false;
