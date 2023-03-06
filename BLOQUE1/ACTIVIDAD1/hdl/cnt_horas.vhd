@@ -31,7 +31,7 @@ architecture rtl of cnt_horas is
 
 begin
 
-  -- Control señal de modo
+  -- Control seï¿½al de modo
   process(clk, nRst)   
   begin
     if nRst = '0' then
@@ -45,7 +45,7 @@ begin
     end if;
   end process;
 
-  -- Control señal AM/PM
+  -- Control seï¿½al AM/PM
   process(clk, nRst)   
   begin
     if nRst = '0' then
@@ -75,7 +75,11 @@ begin
   aux_horas_12_H <= horas(7 downto 4) - 1 when horas(3 downto 0) > 1 else
                     horas(7 downto 4) - 2;
 
-  horas_12 <= aux_horas_12_H & aux_horas_12_L when horas > X"11" else --Error: el número 11 no estaba en el formato indicado
+
+  ----------------------------------------------------------------------------------------
+--ERROR: el numero 11 no estaba en el formato indicado
+----------------------------------------------------------------------------------------
+  horas_12 <= aux_horas_12_H & aux_horas_12_L when horas > X"11" else 
              horas;
 
   -- Paso de formato 12 a 24
@@ -121,8 +125,13 @@ begin
     end if;
   end process;
   
+----------------------------------------------------------------------------------------
+--ERROR: hemos cambiado el > por = Este error se corrige en ambas lineas que tienen un X"11"
+----------------------------------------------------------------------------------------
+
+
   ena_decenas_horas <= ena or inc_campo when horas(3 downto 0) = 9        else
-                       ena or inc_campo when horas = X"23" 		  else --ERROR: hemos cambiado el > por =
+                       ena or inc_campo when horas = X"23" 		  else 
                        ena or inc_campo when horas = X"11" and modo = '0' else
                        '0';
 
