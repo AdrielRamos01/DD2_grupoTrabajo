@@ -39,7 +39,12 @@ begin
       end if;
     end if;
   end process;
-  ena_decenas_minutos <= '1' when ena = '1' and minutos(3 downto 0) = 9 
+
+  ------------------------------------------------------------------
+  -- ERROR: Debemos habilitar el cambio de unidades en modo normal y 
+  -- tambien en programacion. Para ello incluimos el "or inc_campo = '1'"
+  ------------------------------------------------------------------
+  ena_decenas_minutos <= '1' when (ena = '1' or inc_campo = '1') and minutos(3 downto 0) = 9
                          else '0';
 
   process(clk, nRst)    -- Decenas de minutos
