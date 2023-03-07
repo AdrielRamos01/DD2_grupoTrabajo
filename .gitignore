@@ -26,5 +26,5 @@ hs_err_pid*
 # Directorios
 P1/W/
 
-.pdf
-.docx
+*.pdf
+*.docx
