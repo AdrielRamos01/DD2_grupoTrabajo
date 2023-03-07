@@ -1,0 +1,23 @@
+D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/hdl/reg_in_SDA.vhd {0 {vcom -work work -2002 -explicit -stats=none D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/hdl/reg_in_SDA.vhd
+Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity reg_in_SDA
+-- Compiling architecture rtl of reg_in_SDA
+** Error: D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/hdl/reg_in_SDA.vhd(60): near "then": syntax error
+** Error: D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/hdl/reg_in_SDA.vhd(66): VHDL Compiler exiting
+
+} {10.0 12.0} {}} D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/hdl/filtro_SDA.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/hdl/filtro_SDA.vhd
+Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity filtro_SDA
+-- Compiling architecture rtl of filtro_SDA
+
+} {} {}}
