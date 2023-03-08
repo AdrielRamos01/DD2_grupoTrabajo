@@ -47,8 +47,11 @@ begin
     if nRst = '0' then
       cnt <= "001";
 
+--------------------------------------------------------------------------
+--ERROR: el contador para el timeOut tambien debe reiniciarse en el caso de una pulsacion larga en C. Añadir eso
+--------------------------------------------------------------------------
     elsif clk'event and clk = '1' then
-      if ena_cmd = '1' or time_out = '1' or estado = reposo then
+      if ena_cmd = '1' or pulso_largo = '1' or time_out = '1' or estado = reposo then
         cnt <= "001";
 
       elsif tic_1s = '1' and estado /= reposo then
@@ -80,11 +83,15 @@ begin
   
   dato_campo <= dato_ant&cmd_tecla;
   
+  -----------------------------------------------------------------------------
+  --ERROR en el comando incrementar campo por el pulso largo. Debe depender del 
+  --      tic de 0.25s que se implementa en el sistema. Falta añadirlo.
+  -----------------------------------------------------------------------------
   -- Deteccion del comando introducido por teclado
   comando <= programar_reloj    when pulso_largo = '1' and cmd_tecla = X"A" 						else
              cambio_de_modo     when ena_cmd = '1'     and cmd_tecla = X"D"    						else
              incrementar_campo  when ena_cmd = '1'     and cmd_tecla = X"C"                         else
-             incrementar_campo  when pulso_largo = '1' and cmd_tecla = X"C" 				        else
+             incrementar_campo  when pulso_largo = '1' and cmd_tecla = X"C" and tic_025s = '1' 				        else
              cambiar_campo      when ena_cmd = '1'     and cmd_tecla = X"B"                         else
              numero             when ena_cmd = '1'     and cmd_tecla < X"A" 					    else
              fin_programacion   when ena_cmd = '1'     and cmd_tecla = X"A"                         else          
@@ -93,10 +100,14 @@ begin
   -- Control de Cambio de Modo
   cambiar_modo  <= '1' when comando = cambio_de_modo else
                    '0';
+
+------------------------------------------------------------------------------
+-- Error: los valores de 60, 24 y 12 deben estar en hexadecimal
+------------------------------------------------------------------------------
   -- Control de errores cuando se introduce el numero directamente para que el valor introducido sea una hora o minuto valido
-  campo_valido <=  '1' when (estado /= horas)  and                dato_campo < 60 and dato_campo(3 downto 0) < 10 else
-                   '1' when (estado  = horas)  and modo = '1' and dato_campo < 24 and dato_campo(3 downto 0) < 10 else
-                   '1' when (estado  = horas)  and modo = '0' and dato_campo < 12 and dato_campo(3 downto 0) < 10 else
+  campo_valido <=  '1' when (estado /= horas)  and                dato_campo < X"60" and dato_campo(3 downto 0) < 10 else
+                   '1' when (estado  = horas)  and modo = '1' and dato_campo < X"24" and dato_campo(3 downto 0) < 10 else
+                   '1' when (estado  = horas)  and modo = '0' and dato_campo < X"12" and dato_campo(3 downto 0) < 10 else
                    '0';
 
   -- Control del estado del reloj

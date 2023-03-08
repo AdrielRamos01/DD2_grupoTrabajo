@@ -68,8 +68,10 @@ begin
       end if;
     end if;
   end process;
-
-  fdc <= '1' when ena_decenas_minutos = '1' and minutos(7 downto 4) = 5 
+------------------------------------------------------------------
+-- Error en el incremento del valor de minutos
+------------------------------------------------------------------
+  fdc <= '1' when (ena_decenas_minutos = '1' and minutos(7 downto 4) = 5 ) and ena = '1'
          else '0';
 
 end rtl;

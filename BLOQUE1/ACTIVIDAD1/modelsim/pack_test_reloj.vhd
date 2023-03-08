@@ -157,9 +157,10 @@ package body pack_test_reloj is
                              signal   clk:       in  std_logic) is
   begin
   
-	tecleo(ena_cmd, cmd_tecla, clk, X"A");
-	-- CODIGO A COMPLETAR POR EL ESTUDIANTE
 
+	-- CODIGO A COMPLETAR POR EL ESTUDIANTE
+	tecleo(ena_cmd, cmd_tecla, clk, X"A");  
+  wait until clk'event and clk = '1';
   end procedure;
 
 
@@ -254,6 +255,6 @@ procedure programar_hora_directa (signal ena_cmd: out std_logic;
   tecleo(ena_cmd, cmd_tecla, clk, valor(3 downto 0));
   wait until clk'event and clk = '1';
 
-
+  end procedure;
 
 end package body pack_test_reloj;

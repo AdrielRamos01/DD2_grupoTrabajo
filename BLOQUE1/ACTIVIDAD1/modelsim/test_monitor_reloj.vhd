@@ -204,6 +204,9 @@ begin
         end if;
 
       end if;
+
+      --ESTAS ULTIMAS INSTRUCCIONES LO QUE HACEN ES ACTUALIZAR EN EL MOMENTO TOAS LAS VARIABLES CON LOS
+      --NUEVOS VALORES QUE HAN TOMADO EN ESTE MISMO INSTANTE, NO CON EL PROCESO DE LAS SEÑALES Y CICLOS DELTA
       ena_cmd_T1 := ena_cmd;
       tecla_T1 := cmd_tecla;
       AM_PM_T1 := AM_PM;
@@ -314,6 +317,16 @@ begin
 	
 	-- CODIGO PARA SER COMPLETADO POR EL ESTUDIANTE
 	
+    if ena_cmd_T1 = '1' and cmd_tecla_T1 = X"A" and info_T1 /= 0 then 
+      assert info = 0 
+      report "Monitor 6: fallo al salir de porgramacion hora"  
+      severity error;
+    end if;        
+
+cmd_tecla_T1 := cmd_tecla; 
+ena_cmd_T1 := ena_cmd;
+info_T1 := info;
+
     end if;
   end process;
 

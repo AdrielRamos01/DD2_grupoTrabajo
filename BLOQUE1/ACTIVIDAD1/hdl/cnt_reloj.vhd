@@ -32,9 +32,13 @@ begin
                fdc => fdc_seg,
                seg => segundos);
 
+--------------------------------------------------------------------------------
+--ERROR: el nRst se establece de tal forma que hace que en el modo porgramacion
+--       se incrementasen los segundos, algo que no debe de pasar
+--------------------------------------------------------------------------------
   U1: entity work.cnt_min(rtl)
       port map(clk => clk,
-               nRst => nRst,
+               nRst => ena_reloj,
                ena => fdc_seg,
                inc_campo => inc_campo(0),
                load => load(0),
