@@ -25,7 +25,12 @@ hs_err_pid*
 
 # Directorios
 P1/W/
+*/work/
 
 *.pdf
 *.docx
 *transcript
+*.bak
+*.mti
+*.mpf
+*.wlf
