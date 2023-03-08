@@ -63,44 +63,127 @@ begin
        wait until clk'event and clk = '1';
     end loop;
 
+    --MODO NORMAL: 
+    -- --> Recordar:(0 --> AM, 1 --> PM)
+
     -- Cuenta en formato de 12 horas
     wait until clk'event and clk = '1';
 
-    -- Contamos en formato 24 horas
+    -- Esperar a las 11 y 58 AM
+    esperar_hora(horas, minutos, AM_PM, clk, '0', X"11"&X"58"); 
+
+    -- Cambio de 12h a 24 horas
+    cambiar_modo_12_24(ena_cmd, cmd_tecla, clk); -- --> deberia mostrar las 12:00 PM
+
+    --Esperar a las 23 y 58 y se cambia el modo 24h a 12 horas
+    wait until clk'event and clk = '1';
+    esperar_hora(horas, minutos, AM_PM, clk, '1', X"23"&X"58"); --> deberia mostrar las 00:00 AM
+    cambiar_modo_12_24(ena_cmd, cmd_tecla, clk);
+    
+    ---------------------------------------------------------------------------------------------------------------------------------------------------------------
+    -- -->Hasta aqui se ha comprobado que el reloj cambia de 12h a 24h y viceversa, y que se realiza correctamente el cambio de AM a PM y viceversa en ambos modos.
+    ---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    --Esperar a las 11 y 50 PM y se cambia de modo 12h a 24 horas
+    wait until clk'event and clk = '1';
+    esperar_hora(horas, minutos, AM_PM, clk, '1', X"11"&X"50"); 
+    cambiar_modo_12_24(ena_cmd, cmd_tecla, clk); -- --> deberia mostrar las 23:50 PM
+
+    --Esperar a las 13 y 10 y se cambia de modo 24h a 12 horas
+    wait until clk'event and clk = '1';
+    esperar_hora(horas, minutos, AM_PM, clk, '1', X"13"&X"10"); -- --> deberia mostrar las 1:10 PM
     cambiar_modo_12_24(ena_cmd, cmd_tecla, clk);
 
-    -- Recorrer todas las horas en modo 12 
-   
-    	--esperar_hora(horas, minutos, AM_PM, clk, '1', X"11"&X"59");
-	
-	--esperar_hora(horas, minutos, AM_PM, clk, '0', X"01"&X"59");
+    ---------------------------------------------------------------------------
+    -- --> Hasta aqui se ha comprobado que el reloj cambia de 12h a 24h en PM.
+    ---------------------------------------------------------------------------
 
-    -- Recorrer todas las horas en modo 24h
-	--cambiar_modo_12_24(ena_cmd, cmd_tecla, clk);
-	--esperar_hora(horas, minutos, AM_PM, clk, '1', X"23"&X"59");
-	
-	--esperar_hora(horas, minutos, AM_PM, clk, '0', X"01"&X"50");
+    --MODO PROGRAMACION:
 
-	for i in 0 to 24 loop
-          if horas = X"23" then
-            esperar_hora(horas, minutos, AM_PM, clk, '0', X"00"&X"30");
-          else
-            if horas > X"11" then
-              esperar_hora(horas, minutos, AM_PM, clk, '1',(horas+1)&X"00");
-	      cambiar_modo_12_24(ena_cmd, cmd_tecla, clk);
-              wait until clk'event and clk = '1';
-	      cambiar_modo_12_24(ena_cmd, cmd_tecla, clk);
-            else
-              esperar_hora(horas, minutos, AM_PM, clk, '0',(horas+1)&X"00");
-              cambiar_modo_12_24(ena_cmd, cmd_tecla, clk);
-              wait until clk'event and clk = '1';
-	      cambiar_modo_12_24(ena_cmd, cmd_tecla, clk);
-            end if;
-          end if;
-	end loop;
-	
-        
- 
+    --Estamos en 12 h:
+
+    --Entramos en modo programacion y...
+    wait until clk'event and clk = '1';
+    entrar_modo_prog(pulso_largo, cmd_tecla, clk, 15);
+
+    wait until clk'event and clk = '1';
+    fin_prog(ena_cmd, cmd_tecla, clk);
+    --...salimos para probar la pulsacion corta de A.
+
+    --------------------------------------------------------------------------------------------
+    -- --> Hasta aqui se ha comprobado la salida del Modo Programacion con pulsacion corta de A.
+    --------------------------------------------------------------------------------------------
+
+    --Entramos de nuevo en modo Progamacion...
+    wait until clk'event and clk = '1';
+    entrar_modo_prog(pulso_largo, cmd_tecla, clk, 15);
+
+    --...programamos las 6 y 13 AM...
+    wait until clk'event and clk = '1';
+    programar_hora_inc_corto(ena_cmd, cmd_tecla, horas, minutos, AM_PM, clk, '0', X"06"&X"13");
+    fin_prog(ena_cmd, cmd_tecla, clk);
+    --...y salimos del modo programacion.
+
+    --------------------------------------------------------------------------------------------------------------------
+    -- --> Hasta aqui se ha comprobado la edicion del reloj en el Modo Programacion y la salida de este modo pulsanco A.
+    --------------------------------------------------------------------------------------------------------------------
+
+    --Cambiamos modo, 12h --> 24h y esperamos hasta las 22 y 10.   
+    wait until clk'event and clk = '1';
+    cambiar_modo_12_24(ena_cmd, cmd_tecla, clk);
+    esperar_hora(horas, minutos, AM_PM, clk, '1', X"22"&X"10"); 
+
+    --Estamos en 24 h:
+
+    --Volvemos a entrar en modo Progamacion para probarlo ahora en modo 24h...
+    wait until clk'event and clk = '1';
+    entrar_modo_prog(pulso_largo, cmd_tecla, clk, 15);
+
+    --...programamos las 23 y 15...
+    wait until clk'event and clk = '1';
+    programar_hora_inc_corto(ena_cmd, cmd_tecla, horas, minutos, AM_PM, clk, '1', X"23"&X"15");
+    time_out(clk);
+    --...y salimos del modo programacion sin pulsar A y dejando pasar los 7 segundos.
+
+    ------------------------------------------------------------------------------------------------------------------------------------
+    -- --> Hasta aqui se ha comprobado la edicion del reloj en el Modo Programacion y la salida de este modo con el timer de 7 segundos. 
+    ------------------------------------------------------------------------------------------------------------------------------------
+
+    wait until clk'event and clk = '1';
+    esperar_hora(horas, minutos, AM_PM, clk, '1', X"23"&X"20"); 
+
+    --Tras esperar hasta la hora anterior, ahora el usuario introduce una hora directamente...
+    wait until clk'event and clk = '1';
+    entrar_modo_prog(pulso_largo, cmd_tecla, clk, 15);
+
+    wait until clk'event and clk = '1';
+
+    programar_hora_directa(ena_cmd, cmd_tecla, clk, X"10"&X"20");
+
+    wait until clk'event and clk = '1';
+    fin_prog(ena_cmd, cmd_tecla, clk);
+
+    ----------------------------------------------------------------------------------------------------------------------
+    -- --> Hasta aqui se ha comprobado la edicion del reloj en el Modo Programacion introduciendo los campos directamente.
+    ----------------------------------------------------------------------------------------------------------------------
+
+    --...y esperamos hasta las 15 y 00.
+    esperar_hora(horas, minutos, AM_PM, clk, '1', X"15"&X"00"); 
+
+    --Por ultimo, efectuamos una prueba mas del modo programacion con la pulsacion larga...
+    wait until clk'event and clk = '1';
+    entrar_modo_prog(pulso_largo, cmd_tecla, clk, 15);
+
+    wait until clk'event and clk = '1';
+    programar_hora_inc_largo(pulso_largo, ena_cmd, cmd_tecla, horas, minutos, AM_PM, clk, '1', X"16"&X"10");
+    fin_prog(ena_cmd, cmd_tecla, clk);
+    esperar_hora(horas, minutos, AM_PM, clk, '1', X"16"&X"15"); 
+
+    --------------------------------------------------------------------------------------------------------------------
+    -- --> Hasta aqui se ha comprobado la edicion del reloj en el Modo Programacion utilizando la pulsacion larga de C.
+    --------------------------------------------------------------------------------------------------------------------
+
+    --...tras esperar hasta las 16 h y 15 min --> FIN TEST-BENCH.
 
     assert false
     report "done"

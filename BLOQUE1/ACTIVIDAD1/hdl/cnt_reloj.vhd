@@ -25,20 +25,21 @@ architecture estructural of cnt_reloj is
  
 begin
   U0: entity work.cnt_seg(rtl)
+  --------------------------------------------------------------------------------
+--ERROR: el nRst se establece de tal forma que hace que en el modo porgramacion
+--       se incrementasen los segundos, algo que no debe de pasar
+--------------------------------------------------------------------------------
       port map(clk => clk,
-               nRst => nRst,
+               nRst => ena_reloj,
                tic_1s => tic_1s,
                nrst_ena => nRst,
                fdc => fdc_seg,
                seg => segundos);
 
---------------------------------------------------------------------------------
---ERROR: el nRst se establece de tal forma que hace que en el modo porgramacion
---       se incrementasen los segundos, algo que no debe de pasar
---------------------------------------------------------------------------------
+
   U1: entity work.cnt_min(rtl)
       port map(clk => clk,
-               nRst => ena_reloj,
+               nRst => nRst,
                ena => fdc_seg,
                inc_campo => inc_campo(0),
                load => load(0),
