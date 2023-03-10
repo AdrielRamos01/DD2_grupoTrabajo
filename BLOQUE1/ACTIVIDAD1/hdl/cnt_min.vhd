@@ -1,3 +1,8 @@
+-- Autores: Adriel Ramos Ayuso
+--          Marina Mestre Cardona
+--          Alvaro Marquina Barrera
+--          Daniel Santamaria Alvarez
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
@@ -40,11 +45,10 @@ begin
     end if;
   end process;
 
-  ------------------------------------------------------------------
-  -- ERROR: Debemos habilitar el cambio de unidades en modo normal y 
-  -- tambien en programacion. Para ello incluimos el "or inc_campo = '1'"
-  ------------------------------------------------------------------
-  ena_decenas_minutos <= '1' when (ena = '1' or inc_campo = '1') and minutos(3 downto 0) = 9
+-------------------------------------------------------------------------------------
+-- Error: Habilitamos el cambio de decenas tambien en modo programacion añadiendo el inc_Campo
+-------------------------------------------------------------------------------------
+  ena_decenas_minutos <= '1' when (ena = '1' or inc_campo= '1') and minutos(3 downto 0) = 9 
                          else '0';
 
   process(clk, nRst)    -- Decenas de minutos
@@ -56,7 +60,7 @@ begin
       if load = '1' then
           minutos(7 downto 4) <= dato_in(7 downto 4);
 
-      elsif ena_decenas_minutos = '1' then
+      elsif ena_decenas_minutos = '1'  then
         if minutos(7 downto 4) = 5 then
           minutos(7 downto 4) <= (others => '0');
 
@@ -68,10 +72,11 @@ begin
       end if;
     end if;
   end process;
-------------------------------------------------------------------
--- Error en el incremento del valor de minutos
-------------------------------------------------------------------
-  fdc <= '1' when (ena_decenas_minutos = '1' and minutos(7 downto 4) = 5 ) and ena = '1'
+
+  -------------------------------------------------------------------------------------
+  -- Error: Fallo en el incremento del valor de minutos, debe cambiar ena = 0 por inc_campo = 0
+  -------------------------------------------------------------------------------------
+  fdc <= '1' when ena_decenas_minutos = '1' and minutos(7 downto 4) = 5 and inc_campo= '0' 
          else '0';
 
 end rtl;

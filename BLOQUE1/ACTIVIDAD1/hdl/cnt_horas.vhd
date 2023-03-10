@@ -1,3 +1,8 @@
+-- Autores: Adriel Ramos Ayuso
+--          Marina Mestre Cardona
+--          Alvaro Marquina Barrera
+--          Daniel Santamaria Alvarez
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
@@ -66,20 +71,19 @@ begin
   end process;
   
   fdc_AM_PM <= ena or inc_campo when horas = X"11" and modo = '0' else
-	       '0';
+               '0';
 
   -- Paso de formato 24 a 12
-  aux_horas_12_L <= horas(3 downto 0) - 2 when horas (3 downto 0) > 1  else 
+  aux_horas_12_L <= horas(3 downto 0) - 2 when horas(3 downto 0) > 1 else
                     horas(3 downto 0) + 8;
 
   aux_horas_12_H <= horas(7 downto 4) - 1 when horas(3 downto 0) > 1 else
                     horas(7 downto 4) - 2;
 
-
-  ----------------------------------------------------------------------------------------
---ERROR: el numero 11 no estaba en el formato indicado
-----------------------------------------------------------------------------------------
-  horas_12 <= aux_horas_12_H & aux_horas_12_L when horas > X"11" else 
+  -------------------------------------------------------------------------------------
+  -- Error: El numero 11 estaba en formato incorrecto, debe ser en Hexadecimal
+  -------------------------------------------------------------------------------------
+  horas_12 <= aux_horas_12_H & aux_horas_12_L when horas > X"11" else  
              horas;
 
   -- Paso de formato 12 a 24
@@ -111,7 +115,7 @@ begin
         horas(3 downto 0) <= dato_in(3 downto 0);
 
       elsif (inc_campo = '1' or ena = '1') then
-        if horas(3 downto 0) = 9 then
+        if horas(3 downto 0) = 9 then --
           horas(3 downto 0) <= "0000";
 
         elsif (modo = '0' and horas = X"11") or (modo = '1' and horas = X"23") then
@@ -125,14 +129,14 @@ begin
     end if;
   end process;
   
-----------------------------------------------------------------------------------------
---ERROR: hemos cambiado el > por = Este error se corrige en ambas lineas que tienen un X"11"
-----------------------------------------------------------------------------------------
-
+  -------------------------------------------------------------------------------------
+  -- Error: Las decenas de las horas no están bien habilitadas debido a un error en el símbolo utilizado.
+  --        Anterior mente era > y ahora debe ser =
+  -------------------------------------------------------------------------------------
 
   ena_decenas_horas <= ena or inc_campo when horas(3 downto 0) = 9        else
-                       ena or inc_campo when horas = X"23" 		  else 
-                       ena or inc_campo when horas = X"11" and modo = '0' else
+                       ena or inc_campo when horas = X"23"                else 
+                       ena or inc_campo when horas = X"11" and modo = '0' else 
                        '0';
 
   process(clk, nRst)    -- Decenas de horas
@@ -154,7 +158,7 @@ begin
           horas(7 downto 4) <= dato_in(7 downto 4);	
 
       elsif ena_decenas_horas = '1' then
-        if (modo = '0' and horas(7 downto 4) = X"1") or (horas(7 downto 4) = X"2") then 
+        if (modo = '0' and horas(7 downto 4) = X"1") or (horas(7 downto 4) = X"2") then
           horas(7 downto 4) <= "0000";
 
         else

@@ -1,3 +1,9 @@
+-- Autores: Adriel Ramos Ayuso
+--          Marina Mestre Cardona
+--          Alvaro Marquina Barrera
+--          Daniel Santamaria Alvarez
+
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
@@ -6,7 +12,7 @@ entity cnt_seg is
 port(clk:       in     std_logic;
      nRst:      in     std_logic;
      tic_1s:    in     std_logic;
-     nrst_ena:  in     std_logic;
+     nrst_ena:  in     std_logic; 
      fdc:       buffer std_logic;
      seg:       buffer std_logic_vector(7 downto 0)
     );
@@ -41,6 +47,7 @@ begin
   ena_decenas_segundos <= '1' when tic_1s = '1' and seg(3 downto 0) = 9 
                           else '0';
 
+
   process(clk, nRst)    -- Decenas de segundos
   begin
     if nRst = '0' then
@@ -51,7 +58,7 @@ begin
         seg(7 downto 4) <= (others => '0');
 
       elsif ena_decenas_segundos = '1' then
-        if seg(7 downto 4) = 5 then
+        if seg(7 downto 4) = 5 then 
           seg(7 downto 4) <= (others => '0');
 
         else

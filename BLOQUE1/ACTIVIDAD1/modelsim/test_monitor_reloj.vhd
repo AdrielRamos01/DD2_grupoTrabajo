@@ -26,7 +26,7 @@ architecture test of test_monitor_reloj is
 begin
 
 
-  -- MONITOR 1
+  -- MONITOR 1 Verifica que los valores de horas minutos y segundos sean v�lidos dentro de las especificaciones en todo momento
   process(clk, nRst)
     variable ena_assert: boolean := false;
  
@@ -91,7 +91,7 @@ begin
   end process;
 
   
-  -- MONITOR 2
+  -- MONITOR 2 Funcionamiento correcto de incremento de horas y reseteo de segundos en edicion
   process(clk, nRst)
     variable hora_T1:    std_logic_vector(23 downto 0);
     variable ena_assert: boolean := false;
@@ -106,25 +106,25 @@ begin
       ena_assert := true;
 
     elsif clk'event and clk = '1' and ena_assert then
-      if tic_1s = '1' and info = 0 and info_T1 = 0 and (horas&minutos&segundos) /= 0 and programado = '0' then
+      if tic_1s = '1' and info = 0 and info_T1 = 0 and (horas&minutos&segundos) /= 0 and programado = '0' then --si se ha cambiado de modo 24/12h 
         assert (hora_to_natural(hora_T1) + 1) = hora_to_natural(horas&minutos&segundos)
-        report "Error monitor 2: No se ha incrementado correctamente la hora"  -- TEXTO PARA SER MOFIFICADO CON UN MENSAJE MAS EXPLICATIVO
+        report "Error: en el incremento automatico del reloj"  -- TEXTO PARA SER MOFIFICADO CON UN MENSAJE MAS EXPLICATIVO
         severity error;
 
-      elsif tic_1s = '1' and info = 0 and info_T1 = 0 and programado = '0' then
+      elsif tic_1s = '1' and info = 0 and info_T1 = 0 and programado = '0' then -- si se ha cambiado de modo 24/12h y son las 00:00:00
         assert (hora_T1 = X"115959" and modo = '0') or (hora_T1 = X"235959" and modo = '1')
-        report "Error monitor 2: las horas no se han resetado a 00"  -- TEXTO PARA SER MOFIFICADO CON UN MENSAJE MAS EXPLICATIVO
+        report "Error: en el incremento automatico del reloj"  -- TEXTO PARA SER MOFIFICADO CON UN MENSAJE MAS EXPLICATIVO
         severity error;
 
 
-      elsif info_T1 /= 0 then
+      elsif info_T1 /= 0 then -- Si se ha modificado la hora
         assert segundos = 0
-        report "Error monitor 2: Los segundos no se resetean a 0 al entrar en el modo programaci�n"  -- TEXTO PARA SER MOFIFICADO CON UN MENSAJE MAS EXPLICATIVO
+        report "Error: Segundos no se resetean a 0 en modo edicion"  -- TEXTO PARA SER MOFIFICADO CON UN MENSAJE MAS EXPLICATIVO
         severity error;
 
       end if;
 
-      if info /= 0 or (ena_cmd = '1' and cmd_tecla = X"D") then
+      if info /= 0 or (ena_cmd = '1' and cmd_tecla = X"D") then -- si se ha modificado la hora en modo edicion o se ha cambiado de modo 24/12h
 		programado := '1';
 		
 	  elsif tic_1s = '1' then
@@ -132,7 +132,7 @@ begin
 		
 	  end if;
 	  
-	  if tic_1s = '1' then
+	  if tic_1s = '1' then 
 		hora_T1 := horas&minutos&segundos;
 	  end if;
 
@@ -148,7 +148,7 @@ begin
     variable ena_cmd_T1: std_logic;
     variable tecla_T1:   std_logic_vector(3 downto 0);
     variable AM_PM_T1:   std_logic := '1';
-    variable horas_T1:   std_logic_vector(7 downto 0);
+    variable horas_T1:    std_logic_vector(7 downto 0);
     variable modo_T1:    std_logic;
     variable ena_assert: boolean := false;
 
@@ -160,37 +160,37 @@ begin
       ena_assert := true;
 
     elsif clk'event and clk = '1'  and tic_1s = '1' and ena_assert then
-      if info = 0 and modo = '0' then
+      if info = 0 and modo = '0' then -- Modo 12h
         if (horas&minutos&segundos) = 0  then
-	  assert AM_PM_T1 /= AM_PM
-		  -- SENTENCIA ASSERT PARA SER COMPLETADA
-          report "Error en cambio de AM-PM: no cambia. HOLA ALBERTO QUE TAL"
+						-- si la condicion no se cumple -> error
+	  assert AM_PM_T1/=AM_PM  -- SENTENCIA ASSERT PARA SER COMPLETADA. cuando llego a 0 AM_PM tiene que cambiar
+          report "Error en cambio de AM-PM: no cambia"
           severity error;
 
         else
-	  assert AM_PM_T1 = AM_PM
-		  -- SENTENCIA ASSERT PARA SER COMPLETADA
-          report "Error en AM-PM: cambia cuando no debe. DANI DICE QUE ESTO EST ARREGLADO"
+
+          assert AM_PM_T1=AM_PM  -- SENTENCIA ASSERT PARA SER COMPLETADA
+          report "Error en AM-PM: cambia cuando no debe"
           severity error;   
 
        end if;
 
-      elsif info = 0 and modo = '1' then
-        if (horas&minutos&segundos) < X"120000" then
-	  assert AM_PM = '0'
-		  -- SENTENCIA ASSERT PARA SER COMPLETADA
+      elsif info = 0 and modo = '1' then -- Modo 24h
+        if (horas&minutos& segundos) < X"120000" then
+
+	  assert AM_PM = '0' -- SENTENCIA ASSERT PARA SER COMPLETADA
           report "Error en el valor de AM-PM en modo 24 horas"
           severity error;
 
-        else
-	  assert AM_PM = '1'
-		  -- SENTENCIA ASSERT PARA SER COMPLETADA
-          report "Error en el valor de AM-PM en modo 24 horas. Marquina feo."
+        else 
+
+	  assert AM_PM = '1'  -- SENTENCIA ASSERT PARA SER COMPLETADA
+          report "Error en el valor de AM-PM en modo 24 horas"
           severity error;   
 
         end if;
 
-      elsif modo /= modo_T1 and modo = '0' then
+      elsif modo /= modo_T1 and modo = '0' then --Si cambio de 24h a 12h 
         if horas_T1 < X"12" then
           assert AM_PM = '0'
           report "Error en el valor de AM-PM tras cambio de formato de 24 a 12"
@@ -204,9 +204,6 @@ begin
         end if;
 
       end if;
-
-      --ESTAS ULTIMAS INSTRUCCIONES LO QUE HACEN ES ACTUALIZAR EN EL MOMENTO TOAS LAS VARIABLES CON LOS
-      --NUEVOS VALORES QUE HAN TOMADO EN ESTE MISMO INSTANTE, NO CON EL PROCESO DE LAS SEÑALES Y CICLOS DELTA
       ena_cmd_T1 := ena_cmd;
       tecla_T1 := cmd_tecla;
       AM_PM_T1 := AM_PM;
@@ -217,7 +214,7 @@ begin
   end process; 
 
   
-  -- MONITOR 4
+  -- MONITOR 4 -- Funcionamiento correcto de cambio de modo
   process(clk, nRst)
     variable ena_cmd_T1: std_logic;
     variable tecla_T1:   std_logic_vector(3 downto 0);
@@ -235,9 +232,9 @@ begin
 
     elsif clk'event and clk = '1' and ena_assert then
       if ena_cmd_T1 = '1'  and tecla_T1 = X"D" then
-        if modo = '1' then
-          if AM_PM_T1 = '0' then 
-            assert hora_T1 = (horas&minutos&X"00")
+        if modo = '1' then  --ESTOY EN MODO 12 HORAS Y SE PULSA CAMBIAR DE MODO
+          if AM_PM_T1 = '0' then -- ANTERIORMENTE MODO 12H
+            assert hora_T1 = (horas&minutos&X"00") 
             report "Error en cambio de formato de hora de 12 a 24"
             severity error;
 
@@ -248,7 +245,7 @@ begin
 
           end if;
 
-        elsif hora_T1 < X"120000" then
+        elsif hora_T1 < X"120000" then -- SI ESTOY EN MODO 12H 
             assert hora_T1 = (horas&minutos&X"00")
             report "Error en cambio de formato de hora de 24 a 12"
             severity error;
@@ -269,7 +266,7 @@ begin
   end process;
 
   
-  -- MONITOR 5
+  -- MONITOR 5 Funcionamiento correcto de entrar al modo programacion
   process(clk, nRst)
     variable cmd_tecla_T1:   std_logic_vector(3 downto 0);
     variable ena_assert:     boolean := false;
@@ -285,8 +282,8 @@ begin
 
     elsif clk'event and clk = '1' and ena_assert then
       if pulso_largo_T1 = '1' and cmd_tecla_T1 = X"A" and info_T1 = 0 then
-        assert  info = 2 
-        report "Error: entrar en el campo de programacion por defecto (horas), hemos entrado en minutos"  -- TEXTO PARA SER MOFIFICADO CON UN MENSAJE MAS EXPLICATIVO
+        assert  info = 2
+        report "Error no se posiciona en las horas al entrar en modo programacion"  -- TEXTO PARA SER MOFIFICADO CON UN MENSAJE MAS EXPLICATIVO
         severity error;
       end if;
 
@@ -314,19 +311,16 @@ begin
       ena_assert := true;
 
     elsif clk'event and clk = '1' and ena_assert then
-	
 	-- CODIGO PARA SER COMPLETADO POR EL ESTUDIANTE
-	
-    if ena_cmd_T1 = '1' and cmd_tecla_T1 = X"A" and info_T1 /= 0 then 
-      assert info = 0 
-      report "Monitor 6: fallo al salir de porgramacion hora"  
-      severity error;
-    end if;        
+	if ena_cmd_T1 = '1' and cmd_tecla_T1 = X"A" and info_T1=1 then
+	  assert info = 0
+          report "Error no se ha salido del modo programacion"
+	  severity error;
+	end if;
 
-cmd_tecla_T1 := cmd_tecla; 
-ena_cmd_T1 := ena_cmd;
-info_T1 := info;
-
+	cmd_tecla_T1 := cmd_tecla;
+	ena_cmd_T1 := ena_cmd;
+	info_T1 := info;
     end if;
   end process;
 
@@ -368,7 +362,7 @@ info_T1 := info;
   end process;
   
 
-  -- MONITOR 8
+  -- MONITOR 8 Funcionamiento correcto de cambio de campo en modo edicion de horas a minutos
   process(clk, nRst)
     variable info_T1:    std_logic_vector(1 downto 0);
     variable ena_assert: boolean := false;
@@ -383,15 +377,15 @@ info_T1 := info;
       ena_assert := true;
 
     elsif clk'event and clk = '1' and ena_assert then
-      if ena_cmd_T1 = '1' and cmd_tecla_T1 = X"B" and info_T1 /= 0 then
-        if info_T1 = 1 then
-          assert info = 2
-          report "Error al cambiar de porgramacion horas a programacion minutos"  -- TEXTO PARA SER MOFIFICADO CON UN MENSAJE MAS EXPLICATIVO
+      if ena_cmd_T1 = '1' and cmd_tecla_T1 = X"B" and info_T1 /= 0 then -- HEMOS CAMBIADO DE CAMPO Y NO HEMOS SALIDO DEL MODO EDICION
+        if info_T1 = 1 then -- ESTABAMOS EN MINUTOS
+          assert info = 2 -- TENEMOS QUE ESTAR EN HORAS
+          report "Error en el cambio de campo en la edicion de horas"  -- TEXTO PARA SER MOFIFICADO CON UN MENSAJE MAS EXPLICATIVO
           severity error;
 
-        else
-          assert info = 1
-          report "Error al cambiar de porgramacion minutos a programacion horas"  -- TEXTO PARA SER MOFIFICADO CON UN MENSAJE MAS EXPLICATIVO
+        else -- ESTABAMOS EN HORAS
+          assert info = 1 -- TENEMOS QUE ESTAR EN MINUTOS
+          report "Error en el cambio de campo en la edicion de minutos"  -- TEXTO PARA SER MOFIFICADO CON UN MENSAJE MAS EXPLICATIVO
           severity error;
 
         end if;
@@ -504,4 +498,5 @@ info_T1 := info;
   end process;
 
   
+
 end test;

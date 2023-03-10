@@ -1,3 +1,9 @@
+-- Autores: Adriel Ramos Ayuso
+--          Marina Mestre Cardona
+--          Alvaro Marquina Barrera
+--          Daniel Santamaria Alvarez
+
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
@@ -24,18 +30,17 @@ architecture estructural of cnt_reloj is
   signal fdc_minutos: std_logic;
  
 begin
+    -------------------------------------------------------------------------------------
+  -- Error: Los segundos siguen incrementandose en el modo porgramacion, no deberian hacerlo,
+  --        Mal configurado el nrst_ena
+  -------------------------------------------------------------------------------------
   U0: entity work.cnt_seg(rtl)
-  --------------------------------------------------------------------------------
---ERROR: el nRst se establece de tal forma que hace que en el modo porgramacion
---       se incrementasen los segundos, algo que no debe de pasar
---------------------------------------------------------------------------------
       port map(clk => clk,
-               nRst => ena_reloj,
+               nRst => nRst,
                tic_1s => tic_1s,
-               nrst_ena => nRst,
+               nrst_ena => ena_reloj, 
                fdc => fdc_seg,
                seg => segundos);
-
 
   U1: entity work.cnt_min(rtl)
       port map(clk => clk,
