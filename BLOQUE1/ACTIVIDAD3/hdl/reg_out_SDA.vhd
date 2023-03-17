@@ -79,13 +79,14 @@ begin
         reg_SDA(7 downto 0) <= dato_in;
 
       elsif desplaza_reg_out_SDA = '1' then   -- Se desplaza un bit a SDA y se introduce un '1' por la derecha
-        reg_SDA <= daton_in & '1';
+        reg_SDA <= reg_SDA(7 downto 0) & '1';  --EDITADO MIRANDO CODIGO ANTONIO EN CLASE DECIR MARCE
 		  
       end if;
     end if;
   end process;
 
-  -- Salida 
-  SDA_out <= reg_SDA(8);
+  -- Salida : modificacion para hacerlo en colector abierto DECIR MARCE
+  SDA_out <= reg_SDA(8) when reg_SDA(8) = '0'
+             else 'Z';
 
 end rtl;

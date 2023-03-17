@@ -57,8 +57,8 @@ begin
       if reset_reg_in_SDA = '1' then
         dato_out <= (others => '0');
 
-      elsif  vlk'event and clk = '1' then  
-      dato_out <= dato_out(7 downto 1);
+      elsif  clk'event and clk = '1' then  
+      dato_out <= dato_out(6 downto 0) & SDA_in;  --FIXME: Mirar lo del desplazamiento "dato out & sda_in" 
 
       end if;
     end if;

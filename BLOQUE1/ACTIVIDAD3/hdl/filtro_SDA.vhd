@@ -1,9 +1,9 @@
 -- Modelo de transmisor-receptor master i2c
 -- Fichero filtro_SDA.vhd
--- Modelo VHDL 2002 de un circuito que filtra glitches de hasta 50 ns en la señal SDA del bus I2C
+-- Modelo VHDL 2002 de un circuito que filtra glitches de hasta 50 ns en la seï¿½al SDA del bus I2C
 -- El reloj del circuito es de 50 MHz (Tclk = 20 ns)
 
--- Especificación funcional y detalles de la implementación:
+-- Especificaciï¿½n funcional y detalles de la implementaciï¿½n:
 
 -- 1.- Salida SDA_filtrado y entrada SDA:
 -- Especificacion: 
@@ -24,7 +24,7 @@
 --              de la interfaz.
 --
 --    Designer: DTE
---    Versión: 1.0
+--    Versiï¿½n: 1.0
 --    Fecha: 25-11-2016
 
 library ieee;
@@ -40,8 +40,10 @@ port(clk:           in     std_logic;
 end entity;
 
 architecture rtl of filtro_SDA is
-  signal SDA_in_T:   std_logic_vector(4 downto 1);   -- Rango con referencias
-  signal SDA_T_0:    std_logic;                      -- Simplificacion del codigo
+  signal SDA_in_T:   std_logic_vector(6 downto 1);   -- Rango con referencias
+  signal SDA_T_0:    std_logic;  
+  signal SDA_T_0_flipflop: std_logic;                    -- Simplificacion del codigo
+  signal SDA_T_0_flipflop_aux: std_logic; 
 
 begin
   SDA_T_0 <= To_X01(SDA_in);                         -- SDA_in vale '0' o 'H'
@@ -52,15 +54,38 @@ begin
       SDA_in_T <= (others => '1');
 
     elsif clk'event and clk = '1' then
-      if (SDA_in_T(4) = SDA_T_0) and (SDA_in_T(3 downto 1) /= SDA_T_0&SDA_T_0&SDA_T_0) then  
-        SDA_in_T(3 downto 1) <= SDA_T_0&SDA_T_0&SDA_T_0;
+      if (SDA_in_T(6) = SDA_T_0_flipflop) and (SDA_in_T(5 downto 1) /= SDA_T_0_flipflop&SDA_T_0_flipflop&SDA_T_0_flipflop&SDA_T_0_flipflop&SDA_T_0_flipflop) then  
+        SDA_in_T(5 downto 1) <= SDA_T_0_flipflop&SDA_T_0_flipflop&SDA_T_0_flipflop&SDA_T_0_flipflop&SDA_T_0_flipflop;
   
       else
-        SDA_in_T <= SDA_in_T(3 downto 1)&SDA_T_0;
+        SDA_in_T <= SDA_in_T(5 downto 1)&SDA_T_0_flipflop;
   
       end if;
     end if;
   end process;
-  SDA_filtrado <= SDA_in_T(4);
+  SDA_filtrado <= SDA_in_T(6);
+
+  process (clk, nRst)
+  begin
+   
+    if nRst = '0' then 
+      SDA_T_0_flipflop_aux <= '1';
+    elsif clk'event and clk = '1' then
+      SDA_T_0_flipflop_aux <= SDA_T_0;
+    end if;
+
+  end process;
+
+
+  process (clk, nRst)
+  begin
+   
+    if nRst = '0' then 
+      SDA_T_0_flipflop <= '1';
+    elsif clk'event and clk = '1' then
+      SDA_T_0_flipflop <= SDA_T_0_flipflop_aux;
+    end if;
+
+  end process;
 
 end rtl;

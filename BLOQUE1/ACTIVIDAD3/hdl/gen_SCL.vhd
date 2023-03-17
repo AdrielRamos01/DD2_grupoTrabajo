@@ -85,29 +85,32 @@ end entity;
 architecture rtl of gen_SCL is
   -- Constantes correspondientes a las especificaciones de tiempo I2C en modo FAST
   -- Reloj de 50 MHz
-  constant I2C_FAST_T_SCL:        natural := 125;       -- Valor implementado = 2.5 us (fSCLmax = 400 KHz) 
-  constant I2C_FAST_T_SCL_L:      natural := 80;        -- Valor implementado = 1.6 us (tLOWmin = 1.3 us + tRmax = 0.3)
-  constant I2C_FAST_T_SCL_H:      natural := 45;        -- Valor implementado = 0.9 us (tHIGHmin = 0.6 us + tFmax = 0.3) 
+  constant I2C_FAST_T_SCL:        natural := 250;       -- Valor implementado = 2.5 us (fSCLmax = 400 KHz) 
+  constant I2C_FAST_T_SCL_L:      natural := 160;        -- Valor implementado = 1.6 us (tLOWmin = 1.3 us + tRmax = 0.3)
+  constant I2C_FAST_T_SCL_H:      natural := 90;        -- Valor implementado = 0.9 us (tHIGHmin = 0.6 us + tFmax = 0.3) 
 
-  constant I2C_FAST_t_hd_dat:     natural := 30;        -- Valor implementado = 0.6 us (> tHD-DATmin = 0 + tfmax = 300 ns y < tvd-datmax = 0.9)
+  constant I2C_FAST_t_hd_dat:     natural := 60;        -- Valor implementado = 0.6 us (> tHD-DATmin = 0 + tfmax = 300 ns y < tvd-datmax = 0.9)
                                                         -- Nota: tvd-datmax se deriva de (tLOWmin - (tsu-dat + tRmax (o tFmax)) de SDA
                                                         -- Se cumple con un margen de 0.3 us
  
-  constant I2C_FAST_t_su_sto:     natural := 45;        -- Valor implementado = 0.9 us (tSU-STOmin + trmax=  (0.6 + 0.3) us)
-  constant I2C_FAST_t_BUF:        natural := 80;        -- Valor implementado = 1.6 us (tBUFmin + Trmax = (1.3 + 0.3) us)
+  constant I2C_FAST_t_su_sto:     natural := 90;        -- Valor implementado = 0.9 us (tSU-STOmin + trmax=  (0.6 + 0.3) us)
+  constant I2C_FAST_t_BUF:        natural := 160;        -- Valor implementado = 1.6 us (tBUFmin + Trmax = (1.3 + 0.3) us)
 
   -- Instante de muestreo de SDA (no es un parametro I2C)
   constant I2C_FAST_t_sample:     natural := I2C_FAST_T_SCL_H/2 + 1; -- Se muestrea SDA en el centro del pulso
 
 
   -- Cuenta para generacion de SCL y salidas
-  signal cnt_SCL:           std_logic_vector(6 downto 0);
+  signal cnt_SCL:           std_logic_vector(7 downto 0);
 
   -- Segnales internas para el control del buffer three-state
   signal n_ctrl_SCL: std_logic;
+  signal n_ctrl_SCL_arreglada: std_logic;
 
   -- Segnal interna para evitar la generacion de ena_in_SDA en el arranque
   signal start: std_logic;
+
+
 
 begin
   -- Generacion de SCL
@@ -127,7 +130,7 @@ begin
           cnt_SCL <= (0 => '1', others => '0'); 
           start <= '1';                                -- Se pone a 1 al principio del nivel alto del primer pulso de SCL
                                                        -- pero solo cuando ha transcurrido el primer ciclo completo de 125 estados
-                                                       -- en el primero de los ciclos completos del reloj
+                                            
         -- con este valor, hacemos que ena-in no aparezca en el primer ciclo, no quiero lecturas de datos en el primer ciclo de SCL
         -- ya que el primer datos llega con el segundo punto a nivel alto del SCL
         end if;
@@ -168,11 +171,26 @@ begin
   --
 
   --esta señal nos indica si el SCL esta a 1 o a 0
-  n_ctrl_SCL <= '1' when cnt_SCL <= I2C_FAST_T_SCL_H else                               -- reloj i2c
+  --antes estaba puesto el <=, pero para retrasar el ciclo dejamos solo el <
+  --ademas añadimoe el "cnt_SCL = I2C_FAST_T_SCL" porque tambien debe valer 1 en el 125
+  n_ctrl_SCL <= '1' when cnt_SCL < I2C_FAST_T_SCL_H else                               -- reloj i2c
+                '1' when cnt_SCL = I2C_FAST_T_SCL   else
                 not ena_SCL;  
 
+  process (clk, nRst)
+  begin
+    
+    if nRst = '0' then
+      n_ctrl_SCL_arreglada <= '1';    --Es 1 porque el valor por defecto de SCL es 1
+
+    elsif clk'event and clk = '1' then
+      n_ctrl_SCL_arreglada <= n_ctrl_SCL;
+     end if;
+  end process;
+
+
   --el primer n_ctrl_SCL podria cambiarse directamente por 0
-  SCL <= n_ctrl_SCL when n_ctrl_SCL = '0' else                                  -- Modelo de la salida SCL en colector abierto
+  SCL <= n_ctrl_SCL_arreglada when n_ctrl_SCL_arreglada = '0' else    -- Modelo de la salida SCL en colector abierto
          'Z';
 
   --***********************************************************************************************************
