@@ -1,0 +1,1348 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/entregable_periferico_i2c/modelsim
+Eagente_ibr_perif_i2c
+Z0 w1680250291
+Z1 DPx4 ieee 9 math_real 0 22 Sk6CSihbPL<f[^Shm]=KX0
+Z2 DPx4 work 21 pack_random_functions 0 22 [0gMc4@J]WNkGWoZM875N0
+Z3 DPx4 work 25 pack_agente_ibr_perif_i2c 0 22 hFY00lKK40]X28WoMQjHn3
+Z4 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z5 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z7 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z8 dD:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim
+Z9 8D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/agente_ibr_perif_i2c.vhd
+Z10 FD:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/agente_ibr_perif_i2c.vhd
+l0
+L12
+VAAeSojagFUK8K=]<cGKN?2
+!s100 @8NVQE7_mgMaIMlIU^VZ<3
+Z11 OV;C;10.4d;61
+32
+Z12 !s110 1681276197
+!i10b 1
+Z13 !s108 1681276197.000000
+Z14 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/agente_ibr_perif_i2c.vhd|
+Z15 !s107 D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/agente_ibr_perif_i2c.vhd|
+!i113 1
+Z16 o-work work -2002 -explicit
+Z17 tExplicit 1
+Astruct_sim
+Z18 DEx4 work 17 seq_ibr_perif_i2c 0 22 ebTmzIQYdjbTOdkPi<B?51
+Z19 DEx4 work 21 monitor_ibr_perif_i2c 0 22 BgOUHA5Tz>[mb6>S;6GGa3
+Z20 DEx4 work 22 colector_ibr_perif_i2c 0 22 HiS4ke`E;NTb_b`J[V?3J1
+Z21 DEx4 work 20 driver_ibr_perif_i2c 0 22 G=k^fAGzWlE<IbFLd@oKc3
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+Z22 DEx4 work 20 agente_ibr_perif_i2c 0 22 AAeSojagFUK8K=]<cGKN?2
+l42
+L34
+V_Pk<7JNoY;SP74bR1TBH]1
+!s100 z[d<47PT?md_5WnjP1A`[2
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 1
+R16
+R17
+Eagente_slave_i2c
+R0
+R1
+R2
+Z23 DPx4 work 21 pack_agente_slave_i2c 0 22 3fP5RbjY1?z;<3JHKmo::3
+R4
+R5
+R6
+R7
+R8
+Z24 8D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/agente_slave_i2c.vhd
+Z25 FD:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/agente_slave_i2c.vhd
+l0
+L11
+Vjn^3aSY0A8HD`Uje5RBP?0
+!s100 =4b7FJbj[YPUeGfT_nY3m1
+R11
+32
+R12
+!i10b 1
+R13
+Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/agente_slave_i2c.vhd|
+Z27 !s107 D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/agente_slave_i2c.vhd|
+!i113 1
+R16
+R17
+Asim_struct
+Z28 DPx4 work 18 pack_seq_slave_i2c 0 22 15]Xlm7mQ8>V0MV^Ul9lQ3
+Z29 DEx4 work 19 sequencer_slave_i2c 0 22 ej:DjLO5DV[HAd[nE<h7<2
+Z30 DEx4 work 17 monitor_slave_i2c 0 22 ?]X@Sgo[QicRV^1F83?f83
+Z31 DEx4 work 18 colector_slave_i2c 0 22 1haYeohBAgMGT?IeT[]cY1
+Z32 DEx4 work 19 responder_slave_i2c 0 22 k?liIK5KYNe=BWn1ZBlKC2
+R1
+R2
+R23
+R4
+R5
+R6
+R7
+Z33 DEx4 work 16 agente_slave_i2c 0 22 jn^3aSY0A8HD`Uje5RBP?0
+l32
+L22
+V?_bB@gbzB_e^RjYPh`Of90
+!s100 V`cKN71m;o4YkA@;1Y=dP3
+R11
+32
+R12
+!i10b 1
+R13
+R26
+R27
+!i113 1
+R16
+R17
+Ecolector_ibr_perif_i2c
+R0
+R1
+R2
+R4
+R5
+R3
+R6
+R7
+R8
+Z34 8D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/colector_ibr_perif_i2c.vhd
+Z35 FD:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/colector_ibr_perif_i2c.vhd
+l0
+L11
+VHiS4ke`E;NTb_b`J[V?3J1
+!s100 2R9eZZ5kEEi2LM]5K5QMd3
+R11
+32
+R12
+!i10b 1
+R13
+Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/colector_ibr_perif_i2c.vhd|
+Z37 !s107 D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/colector_ibr_perif_i2c.vhd|
+!i113 1
+R16
+R17
+Asim
+R1
+R2
+R4
+R5
+R3
+R6
+R7
+R20
+l29
+L28
+V<:0jDjb`8MNB]@UOSoDD62
+!s100 B86Q<b?`5ORG>L=fPjVCN3
+R11
+32
+R12
+!i10b 1
+R13
+R36
+R37
+!i113 1
+R16
+R17
+Ecolector_slave_i2c
+R0
+R1
+R2
+R23
+R4
+R5
+R6
+R7
+R8
+Z38 8D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/colector_slave_i2c.vhd
+Z39 FD:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/colector_slave_i2c.vhd
+l0
+L35
+V1haYeohBAgMGT?IeT[]cY1
+!s100 5RX2icEjCZEF2zOim1^je2
+R11
+32
+Z40 !s110 1681276198
+!i10b 1
+Z41 !s108 1681276198.000000
+Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/colector_slave_i2c.vhd|
+Z43 !s107 D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/colector_slave_i2c.vhd|
+!i113 1
+R16
+R17
+Asim
+R1
+R2
+R23
+R4
+R5
+R6
+R7
+R31
+l53
+L46
+V9gm8ZYL<Tf;224@;@1aVN0
+!s100 `>OAVT4YLBhRg[RjIXH6b2
+R11
+32
+R40
+!i10b 1
+R41
+R42
+R43
+!i113 1
+R16
+R17
+Ectrl_i2c
+Z44 w1681226029
+R4
+R5
+R6
+R7
+R8
+Z45 8D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/control_i2c.vhd
+Z46 FD:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/control_i2c.vhd
+l0
+L65
+V[4>EPGl_d]z44kk38C2``1
+!s100 k?jSj<7_`33DL;l9]KW`Y3
+R11
+32
+Z47 !s110 1681276199
+!i10b 1
+Z48 !s108 1681276199.000000
+Z49 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/control_i2c.vhd|
+Z50 !s107 D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/control_i2c.vhd|
+!i113 1
+R16
+R17
+Artl
+R4
+R5
+R6
+R7
+Z51 DEx4 work 8 ctrl_i2c 0 22 [4>EPGl_d]z44kk38C2``1
+l119
+L104
+VNGY48QYlijI<a3Gh>Xb7m0
+!s100 @2FGhXa56YhT<WGd]nKTd2
+R11
+32
+R47
+!i10b 1
+R48
+R49
+R50
+!i113 1
+R16
+R17
+Edriver_clk_nrst
+R0
+R6
+R7
+R8
+Z52 8D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/driver_clk_nRst.vhd
+Z53 FD:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/driver_clk_nRst.vhd
+l0
+L8
+VdgKHegBA7OTlFnYf?fdE;2
+!s100 @j]Jzm[oR>=iRjbZ==cjb3
+R11
+32
+R40
+!i10b 1
+R41
+Z54 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/driver_clk_nRst.vhd|
+Z55 !s107 D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/driver_clk_nRst.vhd|
+!i113 1
+R16
+R17
+Asim
+R6
+R7
+Z56 DEx4 work 15 driver_clk_nrst 0 22 dgKHegBA7OTlFnYf?fdE;2
+l17
+L16
+V9m]NIzjm7mj3gSk__fk1G2
+!s100 MWSl@CKm4>3WQg6z50bCB2
+R11
+32
+R40
+!i10b 1
+R41
+R54
+R55
+!i113 1
+R16
+R17
+Edriver_ibr_perif_i2c
+Z57 w1680250292
+R1
+R2
+R4
+R5
+R3
+R6
+R7
+R8
+Z58 8D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/driver_ibr_perif_i2c.vhd
+Z59 FD:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/driver_ibr_perif_i2c.vhd
+l0
+L11
+VG=k^fAGzWlE<IbFLd@oKc3
+!s100 hi>b^ZMNUldjoH2K;c:5S3
+R11
+32
+R40
+!i10b 1
+R41
+Z60 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/driver_ibr_perif_i2c.vhd|
+Z61 !s107 D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/driver_ibr_perif_i2c.vhd|
+!i113 1
+R16
+R17
+Asim
+R1
+R2
+R4
+R5
+R3
+R6
+R7
+R21
+l29
+L28
+V>PHDd8Tn9Sg9iBmiR?Wi81
+!s100 >;;Ih1:oHXQ>MN[6ikBCg3
+R11
+32
+R40
+!i10b 1
+R41
+R60
+R61
+!i113 1
+R16
+R17
+Efifo_256x8_dp
+R0
+R4
+R5
+R6
+R7
+R8
+Z62 8D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/fifo_256x8_dp.vhd
+Z63 FD:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/fifo_256x8_dp.vhd
+l0
+L11
+Vml?g8;k[ERiifWG0k4NN72
+!s100 ce>`2AUSd>fbRaEo8EAnc2
+R11
+32
+R47
+!i10b 1
+R48
+Z64 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/fifo_256x8_dp.vhd|
+Z65 !s107 D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/fifo_256x8_dp.vhd|
+!i113 1
+R16
+R17
+Artl
+Z66 DPx9 altera_mf 20 altera_mf_components 0 22 JIZVPUohD7dNa?8:C5^LG2
+Z67 DEx4 work 12 ram_dp_256x8 0 22 S]jOh2I`XMiDW3HjF`<XJ3
+R4
+R5
+R6
+R7
+Z68 DEx4 work 13 fifo_256x8_dp 0 22 ml?g8;k[ERiifWG0k4NN72
+l33
+L25
+VjP^c0Vc9J`E68md7L=BUR1
+!s100 =ETN`e3HDO;=?a1`__>D`2
+R11
+32
+R47
+!i10b 1
+R48
+R64
+R65
+!i113 1
+R16
+R17
+Efifo_dp_256x8
+R0
+R6
+R7
+R8
+Z69 8D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/FIFO_dp_256x8.vhd
+Z70 FD:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/FIFO_dp_256x8.vhd
+l0
+L43
+Vz:f8QI[PK5z6z:So`XdS50
+!s100 45WYU0kLGh`XO^Kh>2NL[0
+R11
+32
+R47
+!i10b 1
+R48
+Z71 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/FIFO_dp_256x8.vhd|
+Z72 !s107 D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/FIFO_dp_256x8.vhd|
+!i113 1
+R16
+R17
+Asyn
+R6
+R7
+Z73 DEx4 work 13 fifo_dp_256x8 0 22 z:f8QI[PK5z6z:So`XdS50
+l96
+L60
+VKSEIEmX:WkGPndBSM8Q:U3
+!s100 FE39O_[@JSLH^zVPcQ@;;0
+R11
+32
+R47
+!i10b 1
+R48
+R71
+R72
+!i113 1
+R16
+R17
+Efiltro_sda
+Z74 w1681228967
+R4
+R5
+R6
+R7
+R8
+Z75 8D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/filtro_SDA.vhd
+Z76 FD:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/filtro_SDA.vhd
+l0
+L34
+Vj:?PmGN:kh2O4hbYmR=P[3
+!s100 Az8cVgn;:^_]P_[V0j7h32
+R11
+32
+R47
+!i10b 1
+R48
+Z77 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/filtro_SDA.vhd|
+Z78 !s107 D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/filtro_SDA.vhd|
+!i113 1
+R16
+R17
+Artl
+R4
+R5
+R6
+R7
+Z79 DEx4 work 10 filtro_sda 0 22 j:?PmGN:kh2O4hbYmR=P[3
+l46
+L42
+VIHZB:kN:]c]?Uk3W`MG>=0
+!s100 F_P]UU3n__9dV6KSMJe3j1
+R11
+32
+R47
+!i10b 1
+R48
+R77
+R78
+!i113 1
+R16
+R17
+Egen_scl
+Z80 w1681227319
+R4
+R5
+R6
+R7
+R8
+Z81 8D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/gen_SCL.vhd
+Z82 FD:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/gen_SCL.vhd
+l0
+L72
+V9a;Fa:2fP7P8Gg`:86jL93
+!s100 9TIN2CJ?;ef8_CK>XK[4@1
+R11
+32
+R47
+!i10b 1
+R48
+Z83 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/gen_SCL.vhd|
+Z84 !s107 D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/gen_SCL.vhd|
+!i113 1
+R16
+R17
+Artl
+R4
+R5
+R6
+R7
+Z85 DEx4 work 7 gen_scl 0 22 9a;Fa:2fP7P8Gg`:86jL93
+l118
+L85
+VVD41AMQ<QmHnCO>3gkb:m1
+!s100 ?F=l9F=<9dEdhEN=nhjo82
+R11
+32
+R47
+!i10b 1
+R48
+R83
+R84
+!i113 1
+R16
+R17
+Einterfaz_i2c
+Z86 w1679047535
+R4
+R5
+R6
+R7
+R8
+Z87 8D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/interfaz_i2c.vhd
+Z88 FD:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/interfaz_i2c.vhd
+l0
+L43
+V1:I;m@cEK85<YWlRmJLhH3
+!s100 EUFNJ1X8O;GoV@o57=ohO0
+R11
+32
+R47
+!i10b 1
+R48
+Z89 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/interfaz_i2c.vhd|
+Z90 !s107 D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/interfaz_i2c.vhd|
+!i113 1
+R16
+R17
+Aestructural
+Z91 DEx4 work 10 reg_in_sda 0 22 7F5Iamb<a`QJczGCGdHUj0
+R79
+Z92 DEx4 work 11 reg_out_sda 0 22 T5U`2@TX0No0V35Ao^3Y<0
+R51
+R85
+R4
+R5
+R6
+R7
+Z93 DEx4 work 12 interfaz_i2c 0 22 1:I;m@cEK85<YWlRmJLhH3
+l74
+L58
+VQDQ[8?aznRSj1RPnVb<;j1
+!s100 kOg7@_dg[GFlj5L3]91oP1
+R11
+32
+R47
+!i10b 1
+R48
+R89
+R90
+!i113 1
+R16
+R17
+Einterfaz_periferico
+R0
+R4
+R5
+R6
+R7
+R8
+Z94 8D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/interfaz_periferico.vhd
+Z95 FD:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/interfaz_periferico.vhd
+l0
+L51
+V85SAl=KD9;i_h<[9k0CR01
+!s100 ^Z]UL@Jn>SlhWoiGfc>6H2
+R11
+32
+R47
+!i10b 1
+R48
+Z96 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/interfaz_periferico.vhd|
+Z97 !s107 D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/interfaz_periferico.vhd|
+!i113 1
+R16
+R17
+Artl
+R68
+R73
+R4
+R5
+R6
+R7
+Z98 DEx4 work 19 interfaz_periferico 0 22 85SAl=KD9;i_h<[9k0CR01
+l100
+L71
+VlLDRiU19W04ocRcOh3]?a0
+!s100 gQeSWeVS@0V]U6L`clIO02
+R11
+32
+R47
+!i10b 1
+R48
+R96
+R97
+!i113 1
+R16
+R17
+Emonitor_bus_i2c
+R57
+R4
+R5
+R6
+R7
+R8
+Z99 8D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/monitor_bus_i2c.vhd
+Z100 FD:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/monitor_bus_i2c.vhd
+l0
+L9
+Vk`ibg2A[YmP@ijbo<>?`P2
+!s100 E=H0E93:S2bXk`5D^nHEK1
+R11
+32
+R40
+!i10b 1
+R41
+Z101 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/monitor_bus_i2c.vhd|
+Z102 !s107 D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/monitor_bus_i2c.vhd|
+!i113 1
+R16
+R17
+Asim
+R4
+R5
+R6
+R7
+Z103 DEx4 work 15 monitor_bus_i2c 0 22 k`ibg2A[YmP@ijbo<>?`P2
+l41
+L15
+V=FUkTXzCE>Em?b7D5MI@E2
+!s100 _T7TN@YSGi3JLK6Mei?G51
+R11
+32
+R40
+!i10b 1
+R41
+R101
+R102
+!i113 1
+R16
+R17
+Emonitor_ibr_perif_i2c
+R57
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+Z104 8D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/monitor_ibr_perif_i2c.vhd
+Z105 FD:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/monitor_ibr_perif_i2c.vhd
+l0
+L12
+VBgOUHA5Tz>[mb6>S;6GGa3
+!s100 YVUoNo677E7]7N30@Q7l21
+R11
+32
+R40
+!i10b 1
+R41
+Z106 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/monitor_ibr_perif_i2c.vhd|
+Z107 !s107 D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/monitor_ibr_perif_i2c.vhd|
+!i113 1
+R16
+R17
+Asim
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+R19
+l30
+L29
+VGLMh;d=c?So[]>Uf3ecUh0
+!s100 MUdFB7_j;@=n9c<ooP5YY1
+R11
+32
+R40
+!i10b 1
+R41
+R106
+R107
+!i113 1
+R16
+R17
+Emonitor_slave_i2c
+R57
+R1
+R2
+R23
+R4
+R5
+R6
+R7
+R8
+Z108 8D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/monitor_slave_i2c.vhd
+Z109 FD:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/monitor_slave_i2c.vhd
+l0
+L53
+V?]X@Sgo[QicRV^1F83?f83
+!s100 _m<6=EAF6WCUF1Az:j^3B0
+R11
+32
+R40
+!i10b 1
+R41
+Z110 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/monitor_slave_i2c.vhd|
+Z111 !s107 D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/monitor_slave_i2c.vhd|
+!i113 1
+R16
+R17
+Asim
+R1
+R2
+R23
+R4
+R5
+R6
+R7
+R30
+l69
+L68
+VLPHcEm=eDNN6JN_DYOIVk1
+!s100 ^gj9ki<i598SLlQIc]j]=3
+R11
+32
+R40
+!i10b 1
+R41
+R110
+R111
+!i113 1
+R16
+R17
+Ppack_agente_ibr_perif_i2c
+R1
+R2
+R4
+R5
+R6
+R7
+R57
+R8
+8D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/pack_agente_ibr_perif_i2c.vhd
+FD:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/pack_agente_ibr_perif_i2c.vhd
+l0
+L7
+VhFY00lKK40]X28WoMQjHn3
+!s100 ^05U3^@I]DI555F9RR[4D2
+R11
+32
+R40
+!i10b 1
+R41
+!s90 -reportprogress|300|-work|work|-2002|-explicit|D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/pack_agente_ibr_perif_i2c.vhd|
+!s107 D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/pack_agente_ibr_perif_i2c.vhd|
+!i113 1
+R16
+R17
+Ppack_agente_slave_i2c
+R1
+R4
+R5
+R2
+R6
+R7
+R57
+R8
+Z112 8D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/pack_agente_slave_i2c.vhd
+Z113 FD:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/pack_agente_slave_i2c.vhd
+l0
+L6
+V3fP5RbjY1?z;<3JHKmo::3
+!s100 ?JiObF9cagYYEmoiL2Mza1
+R11
+32
+b1
+R40
+!i10b 1
+R41
+Z114 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/pack_agente_slave_i2c.vhd|
+Z115 !s107 D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/pack_agente_slave_i2c.vhd|
+!i113 1
+R16
+R17
+Bbody
+R23
+R1
+R4
+R5
+R2
+R6
+R7
+l0
+L75
+V8A=5z17WTKeF8Oh5GIocY3
+!s100 ^G6[VB`n8Eh]5kc`6G@G02
+R11
+32
+R40
+!i10b 1
+R41
+R114
+R115
+!i113 1
+R16
+R17
+Ppack_random_functions
+R1
+R4
+R5
+R6
+R7
+R57
+R8
+Z116 8D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/pack_random_functions.vhd
+Z117 FD:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/pack_random_functions.vhd
+l0
+L6
+V[0gMc4@J]WNkGWoZM875N0
+!s100 VMTRP0RlDDM@:II[F>b_G0
+R11
+32
+b1
+R40
+!i10b 1
+R41
+Z118 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/pack_random_functions.vhd|
+Z119 !s107 D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/pack_random_functions.vhd|
+!i113 1
+R16
+R17
+Bbody
+R2
+R1
+R4
+R5
+R6
+R7
+l0
+L40
+Vh<9R@WGdXJ09;kk8TGF>h2
+!s100 a;KBE8iOi=SV6MlBHWCmX2
+R11
+32
+R40
+!i10b 1
+R41
+R118
+R119
+!i113 1
+R16
+R17
+Ppack_seq_slave_i2c
+R23
+R1
+R4
+R5
+R2
+R6
+R7
+R57
+R8
+Z120 8D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/pack_seq_slave_i2c.vhd
+Z121 FD:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/pack_seq_slave_i2c.vhd
+l0
+L7
+V15]Xlm7mQ8>V0MV^Ul9lQ3
+!s100 FDh0KhVf[=@oAJ3D:Whc?2
+R11
+32
+b1
+R40
+!i10b 1
+R41
+Z122 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/pack_seq_slave_i2c.vhd|
+Z123 !s107 D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/pack_seq_slave_i2c.vhd|
+!i113 1
+R16
+R17
+Bbody
+R28
+R23
+R1
+R4
+R5
+R2
+R6
+R7
+l0
+L57
+VJ7_aNUmg:RkWSf_okdf3F0
+!s100 m_MJkd2aeYXIaCIcI`^Ih0
+R11
+32
+R40
+!i10b 1
+R41
+R122
+R123
+!i113 1
+R16
+R17
+Eperiferico_i2c
+R0
+R4
+R5
+R6
+R7
+R8
+Z124 8D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/periferico_i2c.vhd
+Z125 FD:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/periferico_i2c.vhd
+l0
+L51
+VY]lJV@fYMoHRGFW>26=l:1
+!s100 e>zlD3=i`lWgPEJ>a;16d3
+R11
+32
+R47
+!i10b 1
+R48
+Z126 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/periferico_i2c.vhd|
+Z127 !s107 D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/periferico_i2c.vhd|
+!i113 1
+R16
+R17
+Aestructural
+R93
+R98
+R4
+R5
+R6
+R7
+Z128 DEx4 work 14 periferico_i2c 0 22 Y]lJV@fYMoHRGFW>26=l:1
+l73
+L64
+VbPGZ<mfFP34XgY2bI^5E?0
+!s100 VnFBAciVFiQjPb29@9HKE1
+R11
+32
+R47
+!i10b 1
+R48
+R126
+R127
+!i113 1
+R16
+R17
+Eram_dp_256x8
+R0
+R66
+R6
+R7
+R8
+Z129 8D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/RAM_DP_256x8.vhd
+Z130 FD:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/RAM_DP_256x8.vhd
+l0
+L43
+VS]jOh2I`XMiDW3HjF`<XJ3
+!s100 RbU^_4IELz84gQCa5NhJ51
+R11
+32
+R47
+!i10b 1
+R48
+Z131 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/RAM_DP_256x8.vhd|
+Z132 !s107 D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/RAM_DP_256x8.vhd|
+!i113 1
+R16
+R17
+Asyn
+R66
+R6
+R7
+R67
+l61
+L57
+V[?EnFTn5Pigm8RFGbIA903
+!s100 _jd^4UcGJE>]?TndSbjN00
+R11
+32
+R47
+!i10b 1
+R48
+R131
+R132
+!i113 1
+R16
+R17
+Ereg_in_sda
+Z133 w1681276515
+R4
+R5
+R6
+R7
+R8
+Z134 8D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/reg_in_SDA.vhd
+Z135 FD:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/reg_in_SDA.vhd
+l0
+L38
+V7F5Iamb<a`QJczGCGdHUj0
+!s100 TDDH;?I`[dkk1fWO5hjIO2
+R11
+32
+Z136 !s110 1681276530
+!i10b 1
+Z137 !s108 1681276530.000000
+Z138 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/reg_in_SDA.vhd|
+Z139 !s107 D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/reg_in_SDA.vhd|
+!i113 1
+R16
+R17
+Artl
+R4
+R5
+R6
+R7
+R91
+l49
+L48
+Vi^gD:aH=OfcX]nzDH1mQ90
+!s100 iPSEQ`3]V6I0[z2PDbf`l1
+R11
+32
+R136
+!i10b 1
+R137
+R138
+R139
+!i113 1
+R16
+R17
+Ereg_out_sda
+Z140 w1681227758
+R4
+R5
+R6
+R7
+R8
+Z141 8D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/reg_out_SDA.vhd
+Z142 FD:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/reg_out_SDA.vhd
+l0
+L48
+VT5U`2@TX0No0V35Ao^3Y<0
+!s100 IWIKD^0XC6FjMR`ED1^m73
+R11
+32
+Z143 !s110 1681276200
+!i10b 1
+Z144 !s108 1681276200.000000
+Z145 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/reg_out_SDA.vhd|
+Z146 !s107 D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/hdl/reg_out_SDA.vhd|
+!i113 1
+R16
+R17
+Artl
+R4
+R5
+R6
+R7
+R92
+l64
+L60
+VPgbbCbeIInS10U?8_7H0H1
+!s100 Y?Mo;7Q=m`nfJ3M[;REnS2
+R11
+32
+R143
+!i10b 1
+R144
+R145
+R146
+!i113 1
+R16
+R17
+Eresponder_slave_i2c
+R57
+R1
+R2
+R23
+R4
+R5
+R6
+R7
+R8
+Z147 8D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/responder_slave_i2c.vhd
+Z148 FD:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/responder_slave_i2c.vhd
+l0
+L40
+Vk?liIK5KYNe=BWn1ZBlKC2
+!s100 RmkmgYX73MKKPKQh8_bNQ1
+R11
+32
+R40
+!i10b 1
+R41
+Z149 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/responder_slave_i2c.vhd|
+Z150 !s107 D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/responder_slave_i2c.vhd|
+!i113 1
+R16
+R17
+Asim
+R1
+R2
+R23
+R4
+R5
+R6
+R7
+R32
+l59
+L51
+VElP`ZFj::5nzG4XehKX_M2
+!s100 Y`B^G;M_gziF[Qzjn9FOC1
+R11
+32
+R40
+!i10b 1
+R41
+R149
+R150
+!i113 1
+R16
+R17
+Escoreboard_perif_i2c
+R57
+R23
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+Z151 8D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/scoreboard_perif_i2c.vhd
+Z152 FD:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/scoreboard_perif_i2c.vhd
+l0
+L13
+VH>d=j[I[:ZYoAd`1QoPSI0
+!s100 ^WBl]8SGULCcD@FVPGcG42
+R11
+32
+R40
+!i10b 1
+R41
+Z153 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/scoreboard_perif_i2c.vhd|
+Z154 !s107 D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/scoreboard_perif_i2c.vhd|
+!i113 1
+R16
+R17
+Asim
+R23
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+Z155 DEx4 work 20 scoreboard_perif_i2c 0 22 H>d=j[I[:ZYoAd`1QoPSI0
+l24
+L23
+VCoI7TR]Ac[nc<D:A3^97J3
+!s100 fdW:zCN5;;CeoH2PS6Q>m2
+R11
+32
+R40
+!i10b 1
+R41
+R153
+R154
+!i113 1
+R16
+R17
+Eseq_ibr_perif_i2c
+R57
+R3
+R1
+R2
+R4
+R5
+R6
+R7
+R8
+Z156 8D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/seq_ibr_perif_i2c.vhd
+Z157 FD:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/seq_ibr_perif_i2c.vhd
+l0
+L12
+VebTmzIQYdjbTOdkPi<B?51
+!s100 edHo:[@mekP4O2Z=D_g_?2
+R11
+32
+R40
+!i10b 1
+R41
+Z158 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/seq_ibr_perif_i2c.vhd|
+Z159 !s107 D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/seq_ibr_perif_i2c.vhd|
+!i113 1
+R16
+R17
+Asim
+R3
+R1
+R2
+R4
+R5
+R6
+R7
+R18
+l26
+L24
+V=eWaQNQWkY;7O<odX0dYI2
+!s100 4D`0RgLLLmD8XeKeRW4Al3
+R11
+32
+R47
+!i10b 1
+R41
+R158
+R159
+!i113 1
+R16
+R17
+Esequencer_slave_i2c
+R57
+R28
+R23
+R1
+R2
+R4
+R5
+R6
+R7
+R8
+Z160 8D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/sequencer_slave_i2c.vhd
+Z161 FD:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/sequencer_slave_i2c.vhd
+l0
+L32
+Vej:DjLO5DV[HAd[nE<h7<2
+!s100 Zz2KH]jKnFeXXMClP@:m02
+R11
+32
+R47
+!i10b 1
+R48
+Z162 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/sequencer_slave_i2c.vhd|
+Z163 !s107 D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/sequencer_slave_i2c.vhd|
+!i113 1
+R16
+R17
+Asim
+R28
+R23
+R1
+R2
+R4
+R5
+R6
+R7
+R29
+l46
+L45
+V`0i;<Q@E3WIzjnIQi5UiV1
+!s100 <X3_?FEB1>e8SIZ8Pe]G?2
+R11
+32
+R47
+!i10b 1
+R48
+R162
+R163
+!i113 1
+R16
+R17
+Etest_periferico_i2c
+R57
+R3
+R1
+R2
+R23
+R4
+R5
+R6
+R7
+R8
+Z164 8D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/test_periferico_i2c.vhd
+Z165 FD:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/test_periferico_i2c.vhd
+l0
+L25
+VR?@k2HXEkJfR?LKQ1E?;P3
+!s100 ^L`H0=cDUm8ggPmAl0li`0
+R11
+32
+R47
+!i10b 1
+R48
+Z166 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/test_periferico_i2c.vhd|
+Z167 !s107 D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD4/proyecto/modelsim/test_periferico_i2c.vhd|
+!i113 1
+R16
+R17
+Atest
+R103
+R155
+R33
+R22
+R56
+R128
+R3
+R1
+R2
+R23
+R4
+R5
+R6
+R7
+DEx4 work 19 test_periferico_i2c 0 22 R?@k2HXEkJfR?LKQ1E?;P3
+l52
+L28
+VAXkINZ_nT>=@R4_zoW0fG1
+!s100 NR>dACV1_TWF6L`l4j`?=1
+R11
+32
+R47
+!i10b 1
+R48
+R166
+R167
+!i113 1
+R16
+R17

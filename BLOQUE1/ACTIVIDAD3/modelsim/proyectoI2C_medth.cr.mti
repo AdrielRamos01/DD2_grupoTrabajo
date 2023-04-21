@@ -1,5 +1,7 @@
-D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/hdl/filtro_SDA.vhd {1 {vcom -work work -2002 -explicit -stats=none {D:\ADRIEL\CARRERA\4\8CUATRI\DD2\DD2_grupoTrabajo\BLOQUE1\ACTIVIDAD3\hdl\filtro_SDA.vhd}
+D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/hdl/filtro_SDA.vhd {1 {vcom -work work -2002 -explicit D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/hdl/filtro_SDA.vhd
 Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+Start time: 17:43:59 on Apr 11,2023
+vcom -reportprogress 300 -work work -2002 -explicit D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/hdl/filtro_SDA.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -7,9 +9,13 @@ Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Loading package STD_LOGIC_UNSIGNED
 -- Compiling entity filtro_SDA
 -- Compiling architecture rtl of filtro_SDA
+End time: 17:44:00 on Apr 11,2023, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
 
-} {} {}} D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/test_basico_interfaz_i2c.vhd {1 {vcom -work work -2002 -explicit -stats=none {D:\ADRIEL\CARRERA\4\8CUATRI\DD2\DD2_grupoTrabajo\BLOQUE1\ACTIVIDAD3\modelsim\test_basico_interfaz_i2c.vhd}
+} {} {}} D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/test_basico_interfaz_i2c.vhd {1 {vcom -work work -2002 -explicit D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/test_basico_interfaz_i2c.vhd
 Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+Start time: 17:44:01 on Apr 11,2023
+vcom -reportprogress 300 -work work -2002 -explicit D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/test_basico_interfaz_i2c.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -23,9 +29,13 @@ Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Loading entity secuenciador_interfaz_i2c
 -- Loading entity monitor_bus_i2c
 -- Loading entity agente_slave_i2c
+End time: 17:44:01 on Apr 11,2023, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
 
-} {} {}} D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/monitor_slave_i2c.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/monitor_slave_i2c.vhd
+} {} {}} D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/monitor_slave_i2c.vhd {1 {vcom -work work -2002 -explicit D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/monitor_slave_i2c.vhd
 Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+Start time: 17:44:01 on Apr 11,2023
+vcom -reportprogress 300 -work work -2002 -explicit D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/monitor_slave_i2c.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -34,9 +44,13 @@ Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Loading package pack_agente_slave_i2c
 -- Compiling entity monitor_slave_i2c
 -- Compiling architecture sim of monitor_slave_i2c
+End time: 17:44:01 on Apr 11,2023, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
 
-} {} {}} D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/hdl/reg_in_SDA.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/hdl/reg_in_SDA.vhd
+} {} {}} D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/hdl/reg_in_SDA.vhd {1 {vcom -work work -2002 -explicit D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/hdl/reg_in_SDA.vhd
 Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+Start time: 17:44:00 on Apr 11,2023
+vcom -reportprogress 300 -work work -2002 -explicit D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/hdl/reg_in_SDA.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -44,9 +58,13 @@ Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Loading package STD_LOGIC_UNSIGNED
 -- Compiling entity reg_in_SDA
 -- Compiling architecture rtl of reg_in_SDA
+End time: 17:44:00 on Apr 11,2023, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
 
-} {} {}} D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/pack_agente_slave_i2c.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/pack_agente_slave_i2c.vhd
+} {} {}} D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/pack_agente_slave_i2c.vhd {1 {vcom -work work -2002 -explicit D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/pack_agente_slave_i2c.vhd
 Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+Start time: 17:44:01 on Apr 11,2023
+vcom -reportprogress 300 -work work -2002 -explicit D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/pack_agente_slave_i2c.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -55,9 +73,13 @@ Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Loading package STD_LOGIC_UNSIGNED
 -- Compiling package body pack_agente_slave_i2c
 -- Loading package pack_agente_slave_i2c
+End time: 17:44:01 on Apr 11,2023, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
 
-} {} {}} D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/responder_slave_i2c.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/responder_slave_i2c.vhd
+} {} {}} D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/responder_slave_i2c.vhd {1 {vcom -work work -2002 -explicit D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/responder_slave_i2c.vhd
 Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+Start time: 17:44:01 on Apr 11,2023
+vcom -reportprogress 300 -work work -2002 -explicit D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/responder_slave_i2c.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -66,9 +88,13 @@ Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Loading package pack_agente_slave_i2c
 -- Compiling entity responder_slave_i2c
 -- Compiling architecture sim of responder_slave_i2c
+End time: 17:44:01 on Apr 11,2023, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
 
-} {} {}} D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/hdl/reg_out_SDA.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/hdl/reg_out_SDA.vhd
+} {} {}} D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/hdl/reg_out_SDA.vhd {1 {vcom -work work -2002 -explicit D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/hdl/reg_out_SDA.vhd
 Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+Start time: 17:44:00 on Apr 11,2023
+vcom -reportprogress 300 -work work -2002 -explicit D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/hdl/reg_out_SDA.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -76,9 +102,13 @@ Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Loading package STD_LOGIC_UNSIGNED
 -- Compiling entity reg_out_SDA
 -- Compiling architecture rtl of reg_out_SDA
+End time: 17:44:00 on Apr 11,2023, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
 
-} {} {}} D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/test_gen_SCL.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/test_gen_SCL.vhd
+} {} {}} D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/test_gen_SCL.vhd {1 {vcom -work work -2002 -explicit D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/test_gen_SCL.vhd
 Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+Start time: 17:44:00 on Apr 11,2023
+vcom -reportprogress 300 -work work -2002 -explicit D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/test_gen_SCL.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -87,9 +117,13 @@ Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Compiling entity test_gen_SCL
 -- Compiling architecture test of test_gen_SCL
 -- Loading entity gen_SCL
+End time: 17:44:00 on Apr 11,2023, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
 
-} {} {}} D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/sequencer_slave_i2c.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/sequencer_slave_i2c.vhd
+} {} {}} D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/sequencer_slave_i2c.vhd {1 {vcom -work work -2002 -explicit D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/sequencer_slave_i2c.vhd
 Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+Start time: 17:44:01 on Apr 11,2023
+vcom -reportprogress 300 -work work -2002 -explicit D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/sequencer_slave_i2c.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -98,9 +132,13 @@ Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Loading package pack_agente_slave_i2c
 -- Compiling entity sequencer_slave_i2c
 -- Compiling architecture sim of sequencer_slave_i2c
+End time: 17:44:01 on Apr 11,2023, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
 
-} {} {}} D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/hdl/interfaz_i2c.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/hdl/interfaz_i2c.vhd
+} {} {}} D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/hdl/interfaz_i2c.vhd {1 {vcom -work work -2002 -explicit D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/hdl/interfaz_i2c.vhd
 Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+Start time: 17:44:02 on Apr 11,2023
+vcom -reportprogress 300 -work work -2002 -explicit D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/hdl/interfaz_i2c.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -113,9 +151,13 @@ Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Loading entity reg_out_SDA
 -- Loading entity filtro_SDA
 -- Loading entity reg_in_SDA
+End time: 17:44:02 on Apr 11,2023, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
 
-} {} {}} D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/monitor_bus_i2c.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/monitor_bus_i2c.vhd
+} {} {}} D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/monitor_bus_i2c.vhd {1 {vcom -work work -2002 -explicit D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/monitor_bus_i2c.vhd
 Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+Start time: 17:44:01 on Apr 11,2023
+vcom -reportprogress 300 -work work -2002 -explicit D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/monitor_bus_i2c.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -123,9 +165,13 @@ Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Loading package STD_LOGIC_UNSIGNED
 -- Compiling entity monitor_bus_i2c
 -- Compiling architecture sim of monitor_bus_i2c
+End time: 17:44:02 on Apr 11,2023, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
 
-} {} {}} D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/hdl/gen_SCL.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/hdl/gen_SCL.vhd
+} {} {}} D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/hdl/gen_SCL.vhd {1 {vcom -work work -2002 -explicit D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/hdl/gen_SCL.vhd
 Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+Start time: 17:44:00 on Apr 11,2023
+vcom -reportprogress 300 -work work -2002 -explicit D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/hdl/gen_SCL.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -133,9 +179,13 @@ Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Loading package STD_LOGIC_UNSIGNED
 -- Compiling entity gen_SCL
 -- Compiling architecture rtl of gen_SCL
+End time: 17:44:00 on Apr 11,2023, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
 
-} {} {}} D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/colector_slave_i2c.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/colector_slave_i2c.vhd
+} {} {}} D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/colector_slave_i2c.vhd {1 {vcom -work work -2002 -explicit D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/colector_slave_i2c.vhd
 Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+Start time: 17:44:01 on Apr 11,2023
+vcom -reportprogress 300 -work work -2002 -explicit D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/colector_slave_i2c.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -144,17 +194,25 @@ Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Loading package pack_agente_slave_i2c
 -- Compiling entity colector_slave_i2c
 -- Compiling architecture sim of colector_slave_i2c
+End time: 17:44:01 on Apr 11,2023, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
 
-} {} {}} D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/driver_clk_nRst.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/driver_clk_nRst.vhd
+} {} {}} D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/driver_clk_nRst.vhd {1 {vcom -work work -2002 -explicit D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/driver_clk_nRst.vhd
 Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+Start time: 17:44:01 on Apr 11,2023
+vcom -reportprogress 300 -work work -2002 -explicit D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/driver_clk_nRst.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Compiling entity driver_clk_nRst
 -- Compiling architecture sim of driver_clk_nRst
+End time: 17:44:01 on Apr 11,2023, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
 
-} {} {}} D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/agente_slave_i2c.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/agente_slave_i2c.vhd
+} {} {}} D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/agente_slave_i2c.vhd {1 {vcom -work work -2002 -explicit D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/agente_slave_i2c.vhd
 Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+Start time: 17:44:01 on Apr 11,2023
+vcom -reportprogress 300 -work work -2002 -explicit D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/agente_slave_i2c.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -167,9 +225,13 @@ Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Loading entity colector_slave_i2c
 -- Loading entity monitor_slave_i2c
 -- Loading entity sequencer_slave_i2c
+End time: 17:44:01 on Apr 11,2023, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
 
-} {} {}} D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/hdl/control_i2c.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/hdl/control_i2c.vhd
+} {} {}} D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/hdl/control_i2c.vhd {1 {vcom -work work -2002 -explicit D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/hdl/control_i2c.vhd
 Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+Start time: 17:44:00 on Apr 11,2023
+vcom -reportprogress 300 -work work -2002 -explicit D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/hdl/control_i2c.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -177,9 +239,13 @@ Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Loading package STD_LOGIC_UNSIGNED
 -- Compiling entity ctrl_i2c
 -- Compiling architecture rtl of ctrl_i2c
+End time: 17:44:00 on Apr 11,2023, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
 
-} {} {}} D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/secuenciador_interfaz_i2c.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/secuenciador_interfaz_i2c.vhd
+} {} {}} D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/secuenciador_interfaz_i2c.vhd {1 {vcom -work work -2002 -explicit D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/secuenciador_interfaz_i2c.vhd
 Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+Start time: 17:44:01 on Apr 11,2023
+vcom -reportprogress 300 -work work -2002 -explicit D:/ADRIEL/CARRERA/4/8CUATRI/DD2/DD2_grupoTrabajo/BLOQUE1/ACTIVIDAD3/modelsim/secuenciador_interfaz_i2c.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -188,5 +254,7 @@ Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Loading package pack_agente_slave_i2c
 -- Compiling entity secuenciador_interfaz_i2c
 -- Compiling architecture sim of secuenciador_interfaz_i2c
+End time: 17:44:01 on Apr 11,2023, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
 
 } {} {}}
